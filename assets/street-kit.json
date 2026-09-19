@@ -1,0 +1,16 @@
+{
+  "sheet": "assets/imagegen/street-kit-v1/street-kit-v1-sheet.png",
+  "grid": { "columns": 5, "rows": 2 },
+  "assets": [
+    { "name": "trafficCone", "label": "traffic cone", "width": 88, "behavior": "jump" },
+    { "name": "roadworkSign", "label": "road work sign", "width": 156, "behavior": "jump" },
+    { "name": "newspaperBox", "label": "newspaper box", "width": 114, "behavior": "jump" },
+    { "name": "fireHydrant", "label": "fire hydrant", "width": 96, "behavior": "jump" },
+    { "name": "bikeRack", "label": "bike rack", "width": 126, "behavior": "jump" },
+    { "name": "parkingMeter", "label": "parking meter", "width": 80, "behavior": "jump" },
+    { "name": "trashBin", "label": "rolling trash bin", "width": 112, "behavior": "jump" },
+    { "name": "cableSpool", "label": "cable spool", "width": 150, "behavior": "jump" },
+    { "name": "sawhorse", "label": "road sawhorse", "width": 160, "behavior": "jump" },
+    { "name": "barricadeLamp", "label": "barricade lamp", "width": 96, "behavior": "jump" }
+  ]
+}

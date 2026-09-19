@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "stride": 220,
+  "source": "ChatGPT Image Gen raster contact sheet, parsed into eight deterministic 512px cells with a 34px transparent safety gutter; human-reviewed registration",
+  "frames": [
+    {
+      "phase": "contact-near",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-01.png",
+      "anchor": [
+        256.0,
+        472
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        311.0,
+        149
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "compression-near",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-02.png",
+      "anchor": [
+        255.5,
+        474
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        310.5,
+        152
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "passing-far",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-03.png",
+      "anchor": [
+        255.5,
+        472
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        310.5,
+        146
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "flight-far",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-04.png",
+      "anchor": [
+        256.0,
+        491
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        311.0,
+        148
+      ],
+      "grounded": false
+    },
+    {
+      "phase": "contact-far",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-05.png",
+      "anchor": [
+        256.0,
+        459
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        311.0,
+        141
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "compression-far",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-06.png",
+      "anchor": [
+        255.5,
+        463
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        310.5,
+        145
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "passing-near",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-07.png",
+      "anchor": [
+        255.5,
+        463
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        310.5,
+        141
+      ],
+      "grounded": true
+    },
+    {
+      "phase": "flight-near",
+      "src": "assets/imagegen/runner/run-v8-frames/frame-08.png",
+      "anchor": [
+        256.0,
+        474
+      ],
+      "scale": 0.342042755344418,
+      "headLandmark": [
+        311.0,
+        144
+      ],
+      "grounded": false
+    }
+  ]
+}

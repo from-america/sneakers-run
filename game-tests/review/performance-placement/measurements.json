@@ -1,0 +1,157 @@
+{
+  "evaluation": "Final Chromium run, seed 42, world 2000, 150 real rAF intervals per scene; desktop 1280x800 DPR2, phone 390x844 DPR3. Faster plate2.1x/track1.5x,2x,3x motion retained. Isolated from CPU-heavy solvers.",
+  "before": [
+    {
+      "profile": "desktop",
+      "stage": 0,
+      "p95": 50.0,
+      "max": 50.1,
+      "missed": 31,
+      "drawP95": 47.8,
+      "decodedPixels": 73016320
+    },
+    {
+      "profile": "desktop",
+      "stage": 4,
+      "p95": 66.7,
+      "max": 83.4,
+      "missed": 16,
+      "drawP95": 73.2,
+      "decodedPixels": 73016320
+    },
+    {
+      "profile": "desktop",
+      "stage": 8,
+      "p95": 66.7,
+      "max": 83.4,
+      "missed": 21,
+      "drawP95": 71.6,
+      "decodedPixels": 73016320
+    },
+    {
+      "profile": "desktop",
+      "stage": 9,
+      "p95": 16.8,
+      "max": 66.7,
+      "missed": 3,
+      "drawP95": 28.6,
+      "decodedPixels": 73016320
+    },
+    {
+      "profile": "phone",
+      "stages": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "p95Range": [
+        16.7,
+        16.8
+      ],
+      "max": 16.8,
+      "missed": 0,
+      "drawP95Max": 0.4,
+      "decodedPixels": 18255360
+    }
+  ],
+  "beforeNote": "Baseline values transcribed from the measured tool output, rounded to 0.1ms. Initial local scratch JSON/screenshots were removed when Playwright cleared its results directory.",
+  "after": [
+    {
+      "profile": "desktop",
+      "stage": 0,
+      "p50": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "missed": 0,
+      "drawP95": 0.5,
+      "workP95": 1.5,
+      "decodedPixels": 18255360,
+      "world": 2747.400000000009
+    },
+    {
+      "profile": "desktop",
+      "stage": 4,
+      "p50": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "missed": 0,
+      "drawP95": 0.5,
+      "workP95": 1.2000000178813934,
+      "decodedPixels": 18255360,
+      "world": 2858.18516666666
+    },
+    {
+      "profile": "desktop",
+      "stage": 8,
+      "p50": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "missed": 0,
+      "drawP95": 0.4000000059604645,
+      "workP95": 1.300000011920929,
+      "decodedPixels": 18255360,
+      "world": 2897.1539999999522
+    },
+    {
+      "profile": "desktop",
+      "stage": 9,
+      "p50": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "max": 16.80000000000109,
+      "missed": 0,
+      "drawP95": 0.4000000059604645,
+      "workP95": 1.2000000178813934,
+      "decodedPixels": 18255360,
+      "world": 2911.0503333332813
+    },
+    {
+      "profile": "phone",
+      "stage": 0,
+      "p50": 16.699999999999818,
+      "p95": 16.700000000000273,
+      "max": 16.800000000000182,
+      "missed": 0,
+      "drawP95": 0.5,
+      "workP95": 1.5,
+      "decodedPixels": 18255360,
+      "world": 2742.466666666676
+    },
+    {
+      "profile": "phone",
+      "stage": 4,
+      "p50": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "max": 16.800000000000182,
+      "missed": 0,
+      "drawP95": 0.4000000059604645,
+      "workP95": 1.300000011920929,
+      "decodedPixels": 18255360,
+      "world": 2840.3161666666592
+    },
+    {
+      "profile": "phone",
+      "stage": 8,
+      "p50": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "max": 16.80000000000109,
+      "missed": 0,
+      "drawP95": 0.4000000059604645,
+      "workP95": 1.2999999821186066,
+      "decodedPixels": 18255360,
+      "world": 2890.840999999952
+    },
+    {
+      "profile": "phone",
+      "stage": 9,
+      "p50": 16.69999999999891,
+      "p95": 16.700000000000728,
+      "max": 16.80000000000109,
+      "missed": 0,
+      "drawP95": 0.30000001192092896,
+      "workP95": 1.0999999940395355,
+      "decodedPixels": 18255360,
+      "world": 2904.665999999948
+    }
+  ]
+}

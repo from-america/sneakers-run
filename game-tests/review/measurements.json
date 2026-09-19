@@ -1,0 +1,50 @@
+[
+  {
+    "name": "desktop",
+    "view": {
+      "width": 1280,
+      "height": 738,
+      "scale": 1.1636363636363636,
+      "ground": 677.4909090909091,
+      "worldWidth": 1100
+    },
+    "maxDrawMs": 1376.0999999940395,
+    "frames": 108
+  },
+  {
+    "name": "phone",
+    "view": {
+      "width": 390,
+      "height": 790,
+      "scale": 0.47560975609756095,
+      "ground": 765.2682926829268,
+      "worldWidth": 820
+    },
+    "maxDrawMs": 1411.8999999761581,
+    "frames": 56
+  },
+  {
+    "name": "small-phone",
+    "view": {
+      "width": 320,
+      "height": 514,
+      "scale": 0.3902439024390244,
+      "ground": 493.7073170731707,
+      "worldWidth": 820
+    },
+    "maxDrawMs": 1414.199999988079,
+    "frames": 51
+  },
+  {
+    "name": "landscape",
+    "view": {
+      "width": 844,
+      "height": 346,
+      "scale": 0.5766666666666667,
+      "ground": 316.0133333333333,
+      "worldWidth": 1463.5838150289017
+    },
+    "maxDrawMs": 1440,
+    "frames": 57
+  }
+]

@@ -1,0 +1,283 @@
+@font-face { font-family: BarlowCondensed; src: url('../assets/fonts/barlow-condensed-black.ttf'); font-weight: 900; font-display: swap }
+@font-face { font-family: Space; src: url('../assets/fonts/space-grotesk.ttf'); font-weight: 300 700; font-display: swap }
+:root { --ink: oklch(.24 .023 224); --paper: oklch(.94 .043 86); --yellow: oklch(.88 .17 92); --coral: oklch(.65 .19 30); --muted: oklch(.7 .03 98); --font-display: BarlowCondensed, 'Arial Narrow', sans-serif; --font-body: Space, 'Helvetica Neue', sans-serif; color: var(--ink); background: var(--ink); font-family: var(--font-body) }
+* { box-sizing: border-box } body { margin: 0 } button, a, input, select { -webkit-tap-highlight-color: transparent } button, input, select { font: inherit } button { cursor: pointer; color: inherit; touch-action: manipulation } button:disabled { cursor: default; opacity: .5 } button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px } button:hover:not(:disabled) { background: var(--yellow); color: var(--ink) } [hidden] { display: none !important }
+.arcade { height: 100svh; min-height: 360px; max-width: 1920px; margin: auto; display: flex; flex-direction: column; overflow: hidden; background: var(--paper); position: relative }
+.masthead { height: 62px; flex: none; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; gap: 16px }
+.brand { color: inherit; font-weight: 700; font-size: 14px; text-decoration: none; line-height: 1.1 } .brand span { display: block; font-size: 10px; font-weight: 500; letter-spacing: .14em; margin-top: 5px }
+.edition { font-size: 12px; letter-spacing: .12em; font-weight: 700 } .edition-divider { color: var(--yellow); margin: 0 14px }
+.toolbar { display: flex; gap: 8px } .toolbar button { border: 0; background: transparent; color: var(--paper); min-width: 44px; height: 44px; font-weight: 600; font-size: 23px } .toolbar #muteButton { font-size: 11px; padding: 0 10px } #muteButton span { color: var(--yellow); margin-left: 6px } #muteButton:hover span { color: var(--ink) }
+.scoreboard { flex: none; height: 86px; display: flex; align-items: center; gap: 36px; padding: 12px 28px 17px; position: relative; border-bottom: 1px solid color-mix(in oklch, var(--ink), transparent 70%) }
+.chapter { margin-right: auto; display: flex; align-items: center; gap: 16px } .chapter>span { font-size: 13px; border: 1px solid var(--ink); padding: 8px 10px; white-space: nowrap } .chapter strong { font-size: 20px; font-weight: 700 }
+.chances { display: flex; flex-direction: column; gap: 6px; align-items: center } .chances>span { color: var(--coral); font-size: 17px; white-space: pre } .chances small { font-size: 11px; font-weight: 700 }
+.score, .coins { display: flex; flex-direction: column; align-items: flex-end; gap: 4px } .score>span, .coins>span { font-size: 11px; font-weight: 600; letter-spacing: .06em } .score output, .coins output { font-weight: 700; font-size: 24px; line-height: 1; font-variant-numeric: tabular-nums } .coins { min-width: 46px }
+.route-progress { position: absolute; height: 4px; bottom: 0; left: 0; width: 100%; background: color-mix(in oklch, var(--ink), transparent 92%) } .route-progress span { display: block; height: 100%; width: 100%; background: var(--coral); transform: scaleX(0); transform-origin: left }
+.playfield { flex: 1; min-height: 0; position: relative; isolation: isolate; background: oklch(.8 .064 233) } canvas { display: block; width: 100%; height: 100%; touch-action: none }
+.panel { position: absolute; z-index: 5; max-height: calc(100% - 32px); overflow: auto; overscroll-behavior: contain; scrollbar-width: thin } .panel h1, .panel h2 { font-family: var(--font-display); font-weight: 900; margin: 0; letter-spacing: -.055em; line-height: .94 } .eyebrow { font-size: 11px; letter-spacing: .12em; font-weight: 700; margin: 0 0 14px }
+.home { left: 5.5%; top: 6%; width: min(440px, 44%); overflow: visible } .home h1 { font-size: clamp(48px, 6.4vw, 94px) } .home h1 span { color: var(--coral) } .tagline { font-size: 18px; margin: 16px 0 24px; font-weight: 500 }
+.primary { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; min-height: 56px; padding: 16px 20px; background: var(--ink); color: var(--paper); border: 2px solid var(--ink); font-weight: 700; font-size: 14px; letter-spacing: .025em; box-shadow: 4px 4px 0 color-mix(in oklch, var(--ink), transparent 20%); transition: transform 120ms } .primary>span { color: var(--yellow); font-size: 20px } .primary:hover>span { color: var(--ink) } .primary:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink) }
+.home-links { display: flex; gap: 8px; justify-content: space-between; margin-top: 16px } .home-links button, .home-meta button, .menu-links button { border: 0; background: transparent; padding: 10px 0; text-align: left; font-weight: 600; font-size: 13px; min-height: 44px; text-decoration: underline; text-underline-offset: 4px } .home-links button:hover, .home-meta button:hover, .menu-links button:hover { background: transparent; color: oklch(.43 .14 27) }
+.home-meta { display: flex; flex-direction: column; margin-top: 20px } .home-meta>span { font-size: 11px; font-weight: 700; letter-spacing: .05em } .home-meta>button { align-self: flex-start; font-size: 12px }
+.arcade[data-screen=home] .playfield:before, .arcade[data-screen=loading] .playfield:before { content: ''; position: absolute; inset: 0 auto 0 0; width: 54%; background: var(--paper); z-index: 1 } .arcade[data-screen=home] .scoreboard, .arcade[data-screen=loading] .scoreboard { display: none } .arcade[data-screen=loading] .playfield { background: var(--paper) }
+.menu, .result, .error { width: min(450px, calc(100% - 32px)); left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 30px; background: var(--paper); box-shadow: 8px 8px 0 var(--ink); border: 2px solid var(--ink) } .menu h2, .result h2, .error h2 { font-size: 48px; margin-bottom: 24px }
+.secondary { border: 1px solid var(--ink); background: transparent; width: 100%; min-height: 48px; margin-top: 16px; font-size: 14px; font-weight: 600 } .menu-links { display: flex; justify-content: space-between; gap: 10px; margin-top: 12px }
+.result-copy { font-size: 14px; line-height: 1.45; margin: 0 0 18px; max-width: 40ch } .result-stats { display: flex; justify-content: space-between; gap: 12px; margin: 20px 0 } .result-stats dt { font-size: 11px; font-weight: 700 } .result-stats dd { font-size: 27px; font-weight: 700; margin: 5px 0 0; font-variant-numeric: tabular-nums }
+.objectives { list-style: none; padding: 0; margin: 0 0 22px; display: flex; flex-direction: column; gap: 7px; font-size: 13px } .objectives li:before { content: '○'; margin-right: 10px } .objectives li.earned:before { content: '★'; color: oklch(.5 .12 60) }
+.panel-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px } .panel-top h2 { font-size: 34px } .close { background: transparent; border: 1px solid var(--ink); min-width: 44px; height: 44px; font-size: 20px }
+.selection, .settings { left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--paper); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); padding: 26px; width: min(640px, calc(100% - 32px)); max-height: calc(100% - 24px) }
+.level-list { display: flex; flex-direction: column; margin-top: 24px } .level-list button { display: flex; align-items: center; gap: 16px; min-height: 58px; width: 100%; border: 0; border-bottom: 1px solid color-mix(in oklch, var(--ink), transparent 75%); background: transparent; padding: 10px 8px; text-align: left } .level-list button>span:first-child { font-weight: 700; font-size: 15px; min-width: 26px } .level-list strong { display: block; font-size: 15px } .level-list small { display: block; font-size: 12px; margin-top: 2px } .panel-foot { font-size: 12px; margin: 20px 0 0; line-height: 1.5 }
+.settings-body { margin: 22px 0 } .setting { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 49px; font-size: 14px; border-bottom: 1px solid color-mix(in oklch, var(--ink), transparent 85%) } .setting small { font-size: 11px; display: block; margin: 4px 0 8px } .setting input[type=range] { width: 42%; accent-color: var(--ink); height: 44px } .setting input[type=checkbox] { width: 25px; height: 25px; accent-color: var(--ink); margin: 10px; cursor: pointer } .setting select { width: 54%; min-height: 44px; background: var(--paper); border: 1px solid var(--ink); font-size: 13px; padding: 4px 8px }
+.binding-row { display: flex; gap: 10px; align-items: center; font-size: 14px; margin-top: 16px; flex-wrap: wrap } .binding-row>span { margin-right: auto } .binding-row button { border: 1px solid var(--ink); background: transparent; min-height: 44px; padding: 8px 14px; font-size: 12px } .binding-notice { font-size: 12px; line-height: 1.5 }
+.controls-reference { display: flex; flex-direction: column; gap: 16px; margin-top: 22px } .controls-reference strong { font-size: 12px; margin-right: 12px } .controls-reference span { font-size: 12px } .controls-reference p { font-size: 12px; margin: 5px 0 0; line-height: 1.5 }
+.cue { position: absolute; left: 50%; top: 20px; transform: translateX(-50%); z-index: 2; display: flex; align-items: center; gap: 14px; background: var(--paper); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); padding: 10px 17px; pointer-events: none } .cue>span { font-size: 30px; font-weight: 700; line-height: 1 } .cue strong { font-size: 16px; display: block } .cue div>span { font-size: 12px; display: block; margin-top: 3px }
+.intro-dialogue { position: absolute; left: 50%; bottom: 24px; z-index: 3; width: min(440px, calc(100% - 36px)); transform: translateX(-50%); padding: 10px 16px 12px; border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); background: color-mix(in oklch, var(--paper), transparent 4%); text-align: center; pointer-events: none }
+.intro-dialogue small { display: block; margin-bottom: 4px; color: var(--coral); font-size: 9px; font-weight: 700; letter-spacing: .14em }
+.intro-dialogue strong { display: block; font-size: clamp(14px, 2vw, 20px); letter-spacing: .03em }
+.feedback { position: absolute; top: 22px; right: 22px; color: var(--ink); background: var(--paper); padding: 10px 14px; font-weight: 700; font-size: 14px; max-width: 33%; pointer-events: none } .power { position: absolute; bottom: 16px; right: 22px; background: var(--paper); border: 1px solid var(--ink); padding: 8px 12px; font-size: 12px; font-weight: 700 } .countdown { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-display); font-size: 100px; background: color-mix(in oklch, var(--paper), transparent 65%); z-index: 7 }
+.control-deck { min-height: 96px; flex: none; background: var(--ink); color: var(--paper); padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 22px } .control-note { display: flex; flex-direction: column; gap: 8px } .control-note strong { font-size: 12px; font-weight: 700; letter-spacing: .045em } .control-note>span { font-size: 12px; color: var(--muted) } .action-buttons { display: flex; gap: 12px } .action-buttons button { display: flex; align-items: center; gap: 14px; min-width: 185px; min-height: 62px; border: 1px solid color-mix(in oklch, var(--paper), transparent 65%); background: transparent; color: var(--paper); padding: 10px 16px; text-align: left } .action-buttons kbd { font: 700 12px var(--font-body); color: var(--yellow); min-width: 28px; text-align: center } .action-buttons button>span { font-size: 14px; font-weight: 700 } .action-buttons small { font-size: 10px; display: block; margin-top: 5px; font-weight: 500 } .action-buttons button:hover kbd, .action-buttons button[data-held] kbd { color: var(--ink) } .action-buttons button[data-held] { background: var(--yellow); color: var(--ink) }
+.quit { background: transparent; border: 0; color: var(--paper); font-size: 12px; min-height: 44px; padding: 10px } .save-notice { position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 9; background: var(--paper); padding: 12px; font-size: 12px; max-width: 90%; border: 1px solid var(--ink) } .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap }
+.arcade[data-screen=settings] .playfield:after, .arcade[data-screen=paused] .playfield:after, .arcade[data-screen=result] .playfield:after, .arcade[data-screen=error] .playfield:after { content: ''; position: absolute; inset: 0; background: oklch(.24 .023 224 / .36); z-index: 3; pointer-events: none } .arcade[data-source=gamepad] button:focus { outline: 3px solid var(--coral); outline-offset: 3px } .arcade[data-screen=running][data-source=gamepad] { cursor: none }
+@media (min-width:1600px) { .home { top: 12% } .home h1 { font-size: 110px } .tagline { font-size: 22px } .home-links button { font-size: 16px } .primary { min-height: 64px; font-size: 16px } }
+@media (max-width:700px) {
+ .masthead { height: 54px; padding: 0 16px; gap: 8px } .brand { font-size: 11px } .brand span { font-size: 9px } .edition { display: none } .toolbar { gap: 2px } .toolbar #muteButton { font-size: 10px; padding: 0 5px }
+ .scoreboard { height: 78px; padding: 10px 16px 14px; gap: 18px } .chapter { display: block } .chapter>span { font-size: 11px; border: 0; padding: 0 } .chapter strong { display: block; font-size: 16px; margin-top: 5px } .chances { gap: 5px } .chances>span { font-size: 13px } .chances small { font-size: 10px } .score output,.coins output { font-size: 22px } .score>span,.coins>span { font-size: 10px } .coins { min-width: 26px } .scoreboard .score { display: none }
+ .control-deck { padding: 16px; gap: 12px; min-height: 126px; flex-wrap: wrap } .control-note { width: 100%; gap: 4px } .control-note strong,.control-note>span { font-size: 11px } .action-buttons { width: 100%; gap: 12px } .action-buttons button { min-width: 0; flex: 1; min-height: 60px; padding: 10px; gap: 10px } .action-buttons small { font-size: 9px; line-height: 1.4 } .action-buttons kbd { font-size: 11px } .action-buttons button>span { font-size: 13px }
+ .home { top: 30px; left: 7%; width: 86%; max-width: none } .home h1 { font-size: 64px } .tagline { font-size: 16px; margin: 14px 0 20px } .home-links { margin-top: 12px } .home-meta { margin-top: 10px; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px } .home-meta>span { font-size: 10px; max-width: 125px; line-height: 1.5 } .home-meta>button { font-size: 11px }
+ .arcade[data-screen=home] .playfield:before,.arcade[data-screen=loading] .playfield:before { width: 100%; height: 390px } .arcade[data-screen=home] .playfield,.arcade[data-screen=loading] .playfield { min-height: 540px } .arcade[data-screen=home],.arcade[data-screen=loading] { overflow: auto } .arcade[data-screen=home] .control-note,.arcade[data-screen=loading] .control-note { display: none } .arcade[data-screen=home] .control-deck,.arcade[data-screen=loading] .control-deck { min-height: 86px }
+ .panel h2 { font-size: 36px } .menu,.result,.error { padding: 24px } .menu h2,.result h2 { margin-bottom: 20px } .result-stats { margin: 16px 0 } .result-stats dd { font-size: 25px } .selection,.settings { padding: 20px } .panel-top h2 { font-size: 28px } .cue { top: 18px; padding: 8px 12px; gap: 9px } .cue strong { font-size: 13px } .cue>span { font-size: 24px } .cue div>span { font-size: 11px }
+ .feedback { top: auto; bottom: 17px; left: 16px; right: auto; max-width: 65%; font-size: 11px; padding: 8px 10px } .power { font-size: 11px; bottom: 55px; right: 16px } .quit { margin-left: auto } .setting select { font-size: 11px } .binding-row { font-size: 12px } .binding-row button { padding: 8px 10px } .controls-reference span { font-size: 11px } .result-copy { font-size: 12px } .objectives { font-size: 12px; gap: 5px } .result-stats dt { font-size: 10px } .menu-links button { font-size: 12px } .save-notice { bottom: 152px }
+}
+@media (max-height:610px) and (min-width:701px) {
+ .masthead { height: 44px; padding: 0 20px } .brand span { display: none } .scoreboard { height: 62px; padding: 8px 20px 12px; gap: 25px } .chapter strong { font-size: 17px } .chapter>span { font-size: 11px; padding: 6px 8px } .chances small { font-size: 10px } .score output,.coins output { font-size: 21px }
+ .control-deck { min-height: 68px; padding: 8px 20px } .control-note strong,.control-note>span { font-size: 11px } .action-buttons button { min-height: 48px; min-width: 154px; padding: 6px 10px } .action-buttons small { font-size: 9px }
+ .home { top: 6%; width: 43%; left: 5% } .home h1 { font-size: 54px } .eyebrow { font-size: 10px; margin-bottom: 9px } .tagline { font-size: 14px; margin: 10px 0 14px } .primary { min-height: 48px; padding: 10px 16px; font-size: 12px } .home-links { margin-top: 6px } .home-meta { margin-top: 3px; flex-direction: row; justify-content: space-between; align-items: center } .home-meta>span { font-size: 10px; max-width: 130px; line-height: 1.5 } .home-meta>button,.home-links button { font-size: 11px }
+ .menu,.result,.error { padding: 18px; width: 450px } .panel h2 { font-size: 32px } .menu h2,.result h2 { margin-bottom: 12px } .secondary { min-height: 44px; margin-top: 8px } .menu-links { margin-top: 2px } .menu-links button { font-size: 11px } .result-copy { font-size: 12px; margin-bottom: 8px } .result-stats { margin: 10px 0 } .result-stats dd { font-size: 22px } .objectives { font-size: 11px; gap: 4px; margin-bottom: 12px }
+ .cue { top: 10px; padding: 6px 12px } .cue strong { font-size: 13px } .cue div>span { display: none } .cue>span { font-size: 22px } .feedback { top: auto; bottom: 12px; font-size: 11px; padding: 6px 10px } .selection,.settings { padding: 18px } .settings-body { margin: 14px 0 } .panel-top h2 { font-size: 28px }
+}
+@media (max-width:360px) { .toolbar button { min-width: 38px } .scoreboard { gap: 10px; padding-inline: 12px } .chapter strong { font-size: 14px } .home h1 { font-size: 56px } .home { top: 24px } .home .tagline { font-size: 14px } .home-links button { font-size: 12px } .home-meta { gap: 8px } .control-deck { padding: 12px; min-height: 114px } .control-note>span { font-size: 10px } .action-buttons button { gap: 6px } .action-buttons small { font-size: 8px } .action-buttons kbd { font-size: 10px } .setting { font-size: 12px; gap: 8px } .setting select { width: 57% } }
+@media (prefers-reduced-motion:reduce) { * { transition: none !important; scroll-behavior: auto !important } }
+@media (max-width:700px) and (min-height:611px) {
+ .arcade[data-screen=running] .playfield,.arcade[data-screen=countdown] .playfield,.arcade[data-screen=paused] .playfield,.arcade[data-screen=result] .playfield { flex: none; height: min(460px, calc(100svh - 254px)) }
+ .arcade[data-screen=running] .control-deck,.arcade[data-screen=countdown] .control-deck,.arcade[data-screen=paused] .control-deck,.arcade[data-screen=result] .control-deck { flex: 1; align-content: end; padding-bottom: max(20px, env(safe-area-inset-bottom)) }
+ .action-buttons button { min-height: 76px }
+}
+@media (max-width:700px) { .home h1 { font-size: clamp(46px, 14vw, 64px) } }
+@media (max-width:700px) and (min-height:611px) {
+ .arcade[data-screen=running] .control-deck,.arcade[data-screen=countdown] .control-deck,.arcade[data-screen=paused] .control-deck,.arcade[data-screen=result] .control-deck { display: grid; grid-template-rows: 44px 1fr; align-content: stretch }
+ .arcade[data-screen=running] .action-buttons button { flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px }
+ .arcade[data-screen=running] .action-buttons kbd { font-size: 16px }
+ .arcade[data-screen=running] .action-buttons button>span { font-size: 18px }
+ .arcade[data-screen=running] .action-buttons small { font-size: 10px }
+}
+/* Menus reclaim the playfield so actions stay visible on short displays. */
+.arcade:is([data-screen=paused],[data-screen=result],[data-screen=settings],[data-screen=error]) .scoreboard,
+.arcade:is([data-screen=paused],[data-screen=result],[data-screen=settings],[data-screen=error]) .control-deck { display: none }
+.arcade:is([data-screen=paused],[data-screen=result],[data-screen=settings],[data-screen=error]) .playfield { height: auto; flex: 1 }
+@media (max-width:700px) and (min-height:611px) {
+ .arcade[data-screen=running] .control-deck,.arcade[data-screen=countdown] .control-deck { grid-template-columns: minmax(0,1fr); justify-content: stretch }
+}
+@media (max-height:610px) and (min-width:701px) {
+ .home { top: 8px } .home>.eyebrow { display: none } .home h1 { font-size: 44px } .home .tagline { margin: 8px 0 12px; font-size: 13px } .home-links { margin-top: 4px } .home-meta { margin-top: 0 }
+ .result { width: min(700px,calc(100% - 48px)); display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; padding: 16px }
+ .result>.eyebrow { grid-column: 1 / -1; margin: 0 } .result h2 { grid-column: 1; grid-row: 2; margin: 0; font-size: 28px }
+ .result-copy { grid-column: 1; grid-row: 3; margin: 0 } .result-stats { grid-column: 2; grid-row: 2; margin: 0; align-items: center }
+ .result .objectives { grid-column: 2; grid-row: 3; margin: 0 } .result>.primary { grid-column: 2; grid-row: 4 }
+ .result>.menu-links { grid-column: 1; grid-row: 4; margin: 0; align-items: center }
+}
+
+/* The landing is a title screen, not a dashboard. Let the city fill the
+   viewport and keep the first decision to two clear, reachable actions. */
+.arcade:is([data-screen=home],[data-screen=loading]) { max-width: none; background: var(--ink); }
+.arcade:is([data-screen=home],[data-screen=loading]) .masthead,
+.arcade:is([data-screen=home],[data-screen=loading]) .scoreboard,
+.arcade:is([data-screen=home],[data-screen=loading]) .control-deck { display: none; }
+.arcade:is([data-screen=home],[data-screen=loading]) .playfield { flex: 1; min-height: 0; background: var(--ink); }
+.arcade:is([data-screen=home],[data-screen=loading]) .playfield::before {
+  inset: 0; width: auto; height: auto;
+  background: linear-gradient(90deg, oklch(.16 .025 224 / .86) 0%, oklch(.16 .025 224 / .64) 42%, oklch(.16 .025 224 / .12) 78%, transparent 100%);
+  z-index: 1; pointer-events: none;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .playfield::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(0deg, oklch(.13 .022 224 / .54) 0%, transparent 34%);
+  z-index: 1; pointer-events: none;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home {
+  left: 50%; top: 50%; width: min(560px, calc(100% - 40px));
+  transform: translate(-50%, -50%); color: var(--paper); text-align: center;
+  z-index: 4;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home h1 {
+  font-size: clamp(48px, 12vw, 150px); line-height: .84;
+  letter-spacing: -.07em; text-shadow: 5px 5px 0 oklch(.16 .025 224 / .9);
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions {
+  display: grid; width: min(320px, 100%); gap: 12px;
+  margin: clamp(28px, 5vh, 52px) auto 0;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions button {
+  min-height: 58px; justify-content: center; padding: 15px 22px;
+  letter-spacing: .12em; font-size: 13px;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions .primary {
+  border-color: var(--yellow); background: transparent; color: var(--yellow);
+  box-shadow: none;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions .secondary {
+  margin-top: 0; border: 1px solid color-mix(in oklch, var(--paper), transparent 32%);
+  background: transparent; color: var(--paper);
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions .primary:hover,
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions .secondary:hover {
+  background: var(--paper); color: var(--ink); transform: translateY(-2px);
+  box-shadow: none;
+}
+.home-legacy { display: none; }
+@media (max-width:700px) {
+  .arcade:is([data-screen=home],[data-screen=loading]) .home { width: min(360px, calc(100% - 32px)); }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home h1 { font-size: clamp(48px, 16vw, 82px); }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-actions { width: min(280px, 100%); margin-top: 30px; }
+}
+
+/* Keep the title screen centered over the full city plate. The landing is the
+   game's front door, so its title and first action should read as one focal
+   point instead of being pushed into a side rail. */
+.arcade:is([data-screen=home],[data-screen=loading]) .playfield::before {
+  background: linear-gradient(90deg, oklch(.13 .025 224 / .72) 0%, oklch(.13 .025 224 / .42) 34%, transparent 70%);
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .playfield::after {
+  background: linear-gradient(0deg, oklch(.13 .022 224 / .42), transparent 48%);
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home {
+  left: 50%; top: clamp(14px, 4vh, 48px); width: min(760px, calc(100% - 32px));
+  transform: translateX(-50%); max-height: calc(100% - 28px); overflow: auto;
+  scrollbar-width: none; text-align: center;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home::-webkit-scrollbar { display: none; }
+.arcade:is([data-screen=home],[data-screen=loading]) .home-eyebrow {
+  margin: 0 0 18px; color: var(--yellow); font-size: 11px; letter-spacing: .16em;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home h1 {
+  font-size: clamp(44px, 8vw, 120px); line-height: .9; letter-spacing: -.075em; white-space: nowrap;
+  text-shadow: 5px 5px 0 oklch(.16 .025 224 / .85);
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-deck {
+  max-width: 22ch; margin: 22px auto 0; color: color-mix(in oklch, var(--paper), transparent 14%);
+  font-size: clamp(16px, 1.8vw, 21px); line-height: 1.25;
+}
+.arcade:is([data-screen=home],[data-screen=loading]) .home-actions {
+  margin: 32px auto 0; width: min(320px, 100%);
+}
+@media (max-width:700px) {
+  .arcade:is([data-screen=home],[data-screen=loading]) .home { left: 50%; width: calc(100% - 24px); }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-eyebrow { margin-bottom: 14px; font-size: 9px; }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home h1 { font-size: clamp(48px, 16vw, 82px); }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-deck { margin-top: 16px; font-size: 16px; }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-actions { margin-top: 24px; }
+}
+
+/* Feel pass: make the decision loop read like an arcade callout. */
+.streak-badge { display: flex; align-items: baseline; gap: 7px; min-width: 88px; padding: 7px 9px 6px; border: 1px solid var(--coral); background: color-mix(in oklch, var(--coral), transparent 86%); color: var(--ink); line-height: 1; }
+.streak-badge span, .streak-badge small { display: block; font-size: 9px; font-weight: 700; letter-spacing: .08em; }
+.streak-badge output { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.streak-badge small { align-self: end; margin-left: -2px; margin-bottom: 1px; letter-spacing: 0; white-space: nowrap; }
+.cue { transition: border-color 140ms ease-out, background 140ms ease-out, transform 140ms ease-out; }
+.cue-label { display: block; margin-bottom: 2px; color: color-mix(in oklch, var(--ink), transparent 28%); font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.cue-time { align-self: stretch; display: grid; place-items: center; min-width: 36px; padding-left: 10px; border-left: 1px solid color-mix(in oklch, var(--ink), transparent 78%); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.cue[data-move=jump] { border-color: var(--yellow); }
+.cue[data-move=roll] { border-color: var(--yellow); background: color-mix(in oklch, var(--yellow), var(--paper) 72%); }
+.cue[data-move=stomp] { border-color: var(--coral); background: color-mix(in oklch, var(--coral), var(--paper) 82%); }
+.cue[data-move=stomp] .cue-time { color: var(--coral); }
+.feedback { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 8px; row-gap: 2px; min-width: 160px; border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); animation: feedback-pop 180ms ease-out; }
+.feedback>span { grid-column: 1 / -1; font-size: 9px; letter-spacing: .12em; }
+.feedback>strong { font-size: 16px; line-height: 1.1; }
+.feedback>small { justify-self: end; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+.feedback[data-kind=reward], .feedback[data-kind=coin] { background: var(--yellow); }
+.feedback[data-kind=near], .feedback[data-kind=hit] { background: var(--coral); color: var(--paper); }
+.feedback[data-kind=stomp] { background: var(--ink); color: var(--yellow); }
+.feedback[data-kind=power] { background: var(--paper); border-color: var(--yellow); }
+.hud-pop { animation: hud-pop 220ms ease-out; }
+.action-buttons button { transition: background 120ms ease-out, color 120ms ease-out, border-color 120ms ease-out, transform 120ms ease-out; }
+.action-buttons button:active:not(:disabled), .action-buttons button[data-held] { transform: translateY(2px); }
+.pause-copy { margin: -12px 0 20px; font-size: 13px; line-height: 1.45; max-width: 34ch; }
+@keyframes feedback-pop { from { opacity: 0; transform: translateY(-5px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes hud-pop { 0% { transform: scale(1); } 45% { transform: scale(1.14); } 100% { transform: scale(1); } }
+@media (max-width:700px) {
+ .scoreboard { gap: 12px; }
+ .streak-badge { min-width: 75px; padding-inline: 7px; gap: 4px; }
+ .streak-badge output { font-size: 18px; }
+ .streak-badge small { display: none; }
+ .cue { max-width: calc(100% - 32px); }
+ .feedback { min-width: 0; max-width: 76%; }
+}
+@media (max-width:360px) { .streak-badge { display: none; } }
+@media (prefers-reduced-motion:reduce) { .feedback, .hud-pop { animation: none !important; } }
+
+/* The landing preview is independent of the game atlas. The browser can
+   paint these four small, approved raster assets while the playable bundle is
+   still decoding, so the loading screen feels immediate. */
+.home-preview { display: none; position: absolute; inset: 0; z-index: 2; overflow: hidden; background: var(--ink); pointer-events: none; }
+.arcade:is([data-screen=home],[data-screen=loading]) .home-preview { display: block; }
+.arcade:is([data-screen=home],[data-screen=loading]) canvas { visibility: hidden; }
+.home-preview-backdrop { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.home-preview::after { content: ''; position: absolute; inset: 68% 0 0; z-index: 1; background: linear-gradient(0deg, oklch(.12 .022 224 / .72), transparent); }
+.home-preview-character { position: absolute; bottom: 3%; z-index: 2; width: clamp(92px, 10vw, 156px); aspect-ratio: 320 / 360; background-repeat: no-repeat; background-size: 800% 100%; background-position: left center; image-rendering: auto; animation: home-preview-run 900ms steps(7, end) infinite; }
+.home-preview-chaser-gray { left: 10%; bottom: 6%; background-image: url('../assets/runtime/home-chaser-gray.webp'); opacity: .82; animation-delay: -.22s; }
+.home-preview-chaser-blue { left: 22%; bottom: 4%; background-image: url('../assets/runtime/home-chaser-blue.webp'); opacity: .88; animation-delay: -.48s; }
+.home-preview-runner { left: 73%; bottom: 2%; width: clamp(108px, 12vw, 184px); background-image: url('../assets/runtime/home-runner.webp'); animation-delay: -.7s; }
+.arcade[data-screen=loading] .home-actions { display: none; }
+.home-loading { margin: 18px 0 0; color: color-mix(in oklch, var(--paper), transparent 20%); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.home-loading { display: none; align-items: center; justify-content: center; gap: 12px; }
+.arcade[data-screen=loading] .home-loading { display: flex; }
+.home-loading output { color: var(--yellow); font-variant-numeric: tabular-nums; }
+@keyframes home-preview-run { from { background-position: 0 0; } to { background-position: 100% 0; } }
+
+/* Level access is a compact route map: ten equal cards, five per row. */
+.level-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 24px; }
+.home-level-list { width: min(760px, 100%); margin: 24px auto 0; }
+.arcade[data-screen=loading] .home-level-list { display: none; }
+.level-list button.level-card { min-width: 0; min-height: 82px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 6px; padding: 10px; border: 1px solid color-mix(in oklch, var(--ink), transparent 68%); border-bottom-width: 2px; background: color-mix(in oklch, var(--paper), var(--ink) 3%); text-align: left; }
+.level-list button.level-card:hover:not(:disabled), .level-list button.level-card:focus-visible { border-color: var(--ink); background: var(--yellow); }
+.level-number { font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.level-copy { display: block; min-width: 0; width: 100%; }
+.level-copy strong { display: block; overflow: hidden; font-size: 12px; line-height: 1.08; text-overflow: ellipsis; white-space: nowrap; }
+.level-copy small { display: block; overflow: hidden; margin-top: 4px; font-size: 9px; line-height: 1.1; text-overflow: ellipsis; white-space: nowrap; }
+.level-state { display: inline-flex; align-items: center; gap: 6px; min-height: 14px; font-size: 9px; font-weight: 700; letter-spacing: .05em; white-space: nowrap; }
+.level-state.open { color: color-mix(in oklch, var(--ink), transparent 20%); }
+.level-state.locked { color: color-mix(in oklch, var(--ink), transparent 25%); }
+.lock-icon { position: relative; display: inline-block; width: 12px; height: 10px; border: 2px solid currentColor; border-radius: 2px; }
+.lock-icon::before { content: ''; position: absolute; left: 1px; top: -8px; width: 6px; height: 7px; border: 2px solid currentColor; border-bottom: 0; border-radius: 6px 6px 0 0; }
+.setting-action { display: flex; align-items: center; justify-content: flex-end; gap: 18px; min-height: 67px; border-bottom: 1px solid color-mix(in oklch, var(--ink), transparent 85%); font-size: 14px; }
+.setting-action button.secondary { width: auto; min-height: 44px; margin: 0; padding: 8px 13px; font-size: 11px; white-space: nowrap; }
+@media (max-width:700px) {
+.home-preview-character { bottom: 4%; }
+  .home-preview-chaser-gray { left: 4%; bottom: 8%; }
+  .home-preview-chaser-blue { left: 19%; bottom: 5%; }
+  .home-preview-runner { left: 70%; bottom: 3%; }
+  .level-list { gap: 6px; }
+  .level-list button.level-card { min-height: 82px; padding: 8px 6px; }
+  .level-copy strong { font-size: 10px; }
+  .level-copy small { font-size: 8px; }
+  .level-state { gap: 4px; font-size: 8px; }
+  .lock-icon { transform: scale(.85); transform-origin: left center; }
+  .setting-action { align-items: stretch; flex-direction: column; gap: 8px; padding: 10px 0; }
+  .setting-action button.secondary { width: 100%; }
+}
+@media (max-width:360px) {
+  .level-list button.level-card { min-height: 74px; padding-inline: 5px; }
+  .level-copy small { display: none; }
+}
+@media (prefers-reduced-motion:reduce) { .home-preview-character { animation: none; } }
+
+@media (max-height:610px) and (min-width:701px) {
+  .arcade:is([data-screen=home],[data-screen=loading]) .home { top: 8px; transform: translateX(-50%); }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-actions { margin-top: 14px; gap: 6px; }
+  .arcade:is([data-screen=home],[data-screen=loading]) .home-actions button { min-height: 42px; padding: 8px 14px; }
+  .home-level-list { margin-top: 10px; gap: 4px; }
+  .home-level-list button.level-card { min-height: 58px; padding: 5px 6px; gap: 2px; }
+  .home-level-list .level-number { font-size: 10px; }
+  .home-level-list .level-copy strong { font-size: 9px; }
+  .home-level-list .level-copy small { margin-top: 2px; font-size: 7px; }
+  .home-level-list .level-state { min-height: 10px; gap: 3px; font-size: 7px; }
+  .home-level-list .lock-icon { transform: scale(.7); transform-origin: left center; }
+}

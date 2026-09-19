@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "fps": 4,
+  "grid": { "columns": 8, "rows": 1 },
+  "provenance": "Original ChatGPT Image Gen raster sheets, parsed by alpha into fixed frame cells",
+  "assets": [
+    { "id": "loopBarrel", "spriteName": "loopBarrel", "src": "assets/imagegen/looping/construction-barrel-wobble-v1.png", "worldHeight": 95, "behavior": "wobble in place" },
+    { "id": "loopDumpster", "spriteName": "loopDumpster", "src": "assets/imagegen/looping/dumpster-roll-v1.png", "worldHeight": 125, "behavior": "lid bounce" },
+    { "id": "loopVendorCart", "spriteName": "loopVendorCart", "src": "assets/imagegen/looping/vendor-cart-rock-v1.png", "worldHeight": 170, "behavior": "canopy rock" },
+    { "id": "loopTurnstile", "spriteName": "loopTurnstile", "src": "assets/imagegen/looping/turnstile-spin-v1.png", "worldHeight": 125, "behavior": "arm rotation" },
+    { "id": "loopLamp", "spriteName": "loopLamp", "src": "assets/imagegen/looping/barricade-lamp-pulse-v1.png", "worldHeight": 92, "behavior": "amber pulse" },
+    { "id": "loopNewspaper", "spriteName": "loopNewspaper", "src": "assets/imagegen/looping/newspaper-flutter-v1.png", "worldHeight": 42, "behavior": "paper flutter" },
+    { "id": "loopTaxi", "spriteName": "loopTaxi", "src": "assets/imagegen/looping/taxi-idle-v1.png", "worldHeight": 108, "behavior": "engine idle" },
+    { "id": "loopBus", "spriteName": "loopBus", "src": "assets/imagegen/looping/bus-door-loop-v1.png", "worldHeight": 155, "behavior": "door cycle" },
+    { "id": "loopVent", "spriteName": "loopVent", "src": "assets/imagegen/looping/vent-puff-v1.png", "worldHeight": 110, "behavior": "cooling puff" },
+    { "id": "loopPuddle", "spriteName": "loopPuddle", "src": "assets/imagegen/looping/puddle-ripple-v1.png", "worldHeight": 28, "behavior": "ripple" }
+  ]
+}

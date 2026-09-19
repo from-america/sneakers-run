@@ -1,0 +1,36 @@
+{
+  "name": "sneakers-run",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4188 --directory .",
+    "desktop": "electron desktop/main.cjs",
+    "test": "npm run test:art && npm run test:unit && npm run test:performance && npm run test:visual",
+    "check": "npm run test:art && npm run test:unit",
+    "test:art": "node tools/check-rebuild-review.mjs",
+    "test:unit": "node --test game-tests/*.test.mjs",
+    "test:visual": "playwright test --config=game-tests/playwright.config.mjs",
+    "test:performance": "playwright test --config=game-tests/playwright.config.mjs game-tests/performance.spec.mjs",
+    "test:desktop": "node game-tests/desktop.mjs",
+    "test:campaign": "node --test --test-name-pattern=\"all ten\" game-tests/simulation.test.mjs",
+    "capture": "node game-tests/capture.mjs",
+    "build:manifest": "node tools/build-runtime-manifest.mjs",
+    "build:editor": "node tools/build-editor-bundle.mjs",
+    "build:app": "node tools/build-app-bundle.mjs",
+    "build": "npm run build:manifest && npm run build:editor && npm run build:app && npm run test:art && node tools/build.mjs",
+    "package": "npm run build && node tools/package-desktop.mjs",
+    "package:linux": "npm run build && node tools/package-desktop.mjs --platform=linux --arch=x64",
+    "package:windows": "npm run build && node tools/package-desktop.mjs --platform=win32 --arch=x64"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@playwright/test": "^1.63.0",
+    "electron": "44.4.1"
+  },
+  "version": "3.0.0",
+  "description": "Open-source Famous Moji city escape for browser and desktop",
+  "repository": "https://github.com/from-america/sneakers-run",
+  "bugs": "https://github.com/from-america/sneakers-run/issues",
+  "homepage": "https://github.com/from-america/sneakers-run#readme",
+  "main": "desktop/main.cjs"
+}

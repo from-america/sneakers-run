@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "manifestPurpose": "Enemy architecture handoff and raster-art approval gate",
+  "artPolicy": {
+    "newGameArtSource": "ChatGPT Image Gen",
+    "allowedFormats": ["png", "webp"],
+    "svgAllowed": false,
+    "approvalRequiredBeforeRuntime": true,
+    "styleDirection": "original adult-animated suburban-comedy sensibility with thick ink, flat cel shading, warm comic color, and readable street-level silhouettes",
+    "prohibitedReferences": [
+      "Family Guy characters",
+      "Family Guy locations",
+      "Family Guy props",
+      "Family Guy wardrobe",
+      "Family Guy logos",
+      "Family Guy catchphrases",
+      "copied character designs",
+      "copied compositions"
+    ]
+  },
+  "preservedReferences": [
+    {
+      "id": "approved-runner-identity",
+      "status": "approved-existing",
+      "files": [
+        "assets/visual-model/source/runner-otoole-source-board.png",
+        "assets/imagegen/runner/run-v6.png"
+      ],
+      "rule": "Do not redesign, recolor, or replace the orange-haired Sneakers identity."
+    },
+    {
+      "id": "approved-suit-chaser",
+      "status": "approved-existing",
+      "files": [
+        "assets/visual-model/chaser/run.png",
+        "assets/suit-generated.webp"
+      ],
+      "rule": "Preserve the existing suit/chaser art as the separate pursuer reference; do not reinterpret it."
+    }
+  ],
+  "enemies": [
+    {
+      "enemyId": "business-man-1",
+      "canonStatus": "source-confirmed",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/business-man-1/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Unnamed office-clad business man with a distinct point-and-lunge read, grounded shoes, and a readable arm telegraph. Original game asset; do not copy a source frame or scene composition.",
+      "approvalChecks": ["raster", "transparent", "shoe-baseline", "distinct-from-runner", "distinct-from-suit-chaser", "viewport-readable"]
+    },
+    {
+      "enemyId": "business-man-2",
+      "canonStatus": "source-confirmed",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/business-man-2/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Second unnamed office-clad business man with a wider, slower silhouette and a readable stop-and-comment gesture. Original game asset; do not copy a source frame or scene composition.",
+      "approvalChecks": ["raster", "transparent", "shoe-baseline", "distinct-from-business-man-1", "distinct-from-suit-chaser", "viewport-readable"]
+    },
+    {
+      "enemyId": "shoe-box-courier",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/shoe-box-courier/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original shoe-box courier with a compact delivery cart and a stable box stack. Keep the cart grounded and the silhouette readable at phone scale.",
+      "approvalChecks": ["raster", "transparent", "cart-grounded", "box-stack-readable", "viewport-readable"]
+    },
+    {
+      "enemyId": "parking-attendant",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/parking-attendant/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original parking attendant with a signal paddle and small cone. Hand signal must read before body collision; do not use copied uniforms, logos, or named-show references.",
+      "approvalChecks": ["raster", "transparent", "signal-readable", "cone-grounded", "viewport-readable"]
+    },
+    {
+      "enemyId": "raincoat-snatcher",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/raincoat-snatcher/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original raincoat pursuit silhouette with a visible reach arc, hood, and wet-surface spray accent. Flashy details must not obscure the collision body.",
+      "approvalChecks": ["raster", "transparent", "reach-readable", "wet-surface-grounded", "viewport-readable"]
+    },
+    {
+      "enemyId": "skateboard-rival",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/skateboard-rival/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original low skateboard rival with a readable deck, wheels, and wheel shadow. Keep the body lower than Sneakers and the board on the street plane.",
+      "approvalChecks": ["raster", "transparent", "low-profile", "wheel-shadow", "viewport-readable"]
+    },
+    {
+      "enemyId": "bike-messenger",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/bike-messenger/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original bike messenger crossing the lane with readable wheel motion and a grounded shadow. Keep the crossing silhouette broad but never full-screen.",
+      "approvalChecks": ["raster", "transparent", "wheel-motion", "shadow-grounded", "viewport-readable"]
+    },
+    {
+      "enemyId": "pigeon-flock",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/pigeon-flock/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original compact pigeon flock as one bounded silhouette with a single shadow cue. No random particle cloud, tiny independent birds, or visual clutter.",
+      "approvalChecks": ["raster", "transparent", "bounded-silhouette", "shadow-readable", "viewport-readable"]
+    },
+    {
+      "enemyId": "construction-roller",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/construction-roller/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original compact construction roller with beacon and grounded drum. Leave an unmistakable side route around the machine; no logos or readable copied signage.",
+      "approvalChecks": ["raster", "transparent", "drum-grounded", "side-route-readable", "viewport-readable"]
+    },
+    {
+      "enemyId": "camera-flash-chaser",
+      "canonStatus": "original-extension",
+      "assetStatus": "generated-raster",
+      "runtimePath": "assets/imagegen/enemies/camera-flash-chaser/run-v1.png",
+      "format": "png",
+      "frames": 8,
+      "runtimeFps": 8,
+      "transparentBackground": true,
+      "imageGenBrief": "Original camera-wielding chaser with camera rectangle and shoulder strap as the silhouette read. The flash is a small non-blinding cue, never a white screen effect.",
+      "approvalChecks": ["raster", "transparent", "camera-readable", "safe-flash-cue", "viewport-readable"]
+    }
+  ]
+}

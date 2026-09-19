@@ -1,0 +1,46 @@
+{
+  "waterfrontMarker": {
+    "src": "assets/imagegen/level-props/waterfront-life-ring-bollard-v1.png",
+    "width": 180
+  },
+  "loadingCrates": {
+    "src": "assets/imagegen/level-props/loading-bay-crate-stack-v1.png",
+    "width": 210
+  },
+  "rooftopTank": {
+    "src": "assets/imagegen/level-props/rooftop-water-tank-v1.png",
+    "width": 190
+  },
+  "marketStall": {
+    "src": "assets/imagegen/level-props/market-canopy-stall-v1.png",
+    "width": 240
+  },
+  "underpassVent": {
+    "src": "assets/imagegen/level-props/underpass-steam-vent-v1.png",
+    "width": 230
+  },
+  "subwaySignal": {
+    "src": "assets/imagegen/level-props/subway-signal-column-v1.png",
+    "width": 130
+  },
+  "basketballHoop": {
+    "src": "assets/imagegen/level-props/basketball-hoop-backboard-v1.png",
+    "width": 150
+  },
+  "bridgeAnchor": {
+    "src": "assets/imagegen/level-props/bridge-cable-anchor-v1.png",
+    "width": 240
+  },
+  "crosswalkSignal": {
+    "src": "assets/imagegen/level-props/crosswalk-signal-post-v1.png",
+    "width": 120
+  },
+  "dawnStreetlight": {
+    "src": "assets/imagegen/level-props/dawn-streetlight-banner-v1.png",
+    "width": 140
+  },
+  "warehouseSign": {
+    "src": "assets/imagegen/level-props/warehouse-loading-sign-v1.png",
+    "width": 240
+  }
+}

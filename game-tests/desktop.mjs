@@ -1,0 +1,42 @@
+import {_electron as electron} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {mkdtemp,readFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const saveDirectory=await mkdtemp(path.join(tmpdir(),'sneakers-desktop-'));
+let application;
+const launchOptions=()=>({...(process.env.SNEAKERS_RUN_EXECUTABLE?{executablePath:process.env.SNEAKERS_RUN_EXECUTABLE,args:[]}:{args:[path.join(root,'desktop/main.cjs')]}),cwd:root,env:{...process.env,SNEAKERS_RUN_TEST:'1',SNEAKERS_RUN_USER_DATA:saveDirectory}});
+try{
+ application=await electron.launch(launchOptions());
+ const page=await application.firstWindow();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const external=[];page.on('request',req=>{if(/^https?:/.test(req.url()))external.push(req.url());});
+ await page.context().route(/^https?:/,route=>route.abort());
+ await page.waitForFunction(()=>window.__RUN_TEST__?.ready());
+ assert.equal(await page.evaluate(()=>typeof window.require),'undefined');
+ assert.equal(await page.evaluate(()=>typeof window.process),'undefined');
+ await page.evaluate(()=>{
+  window.padButtons=Array(17).fill(false);
+  Object.defineProperty(navigator,'getGamepads',{value:()=>[{index:0,mapping:'standard',connected:true,axes:[0,0],buttons:window.padButtons.map(pressed=>({pressed,value:pressed?1:0}))}]});
+  window.padButtons[0]=true;window.__RUN_TEST__.poll();window.padButtons[0]=false;window.__RUN_TEST__.poll();
+ });
+ await page.waitForFunction(()=>window.__RUN_TEST__.snapshot().phase==='running');
+ await page.waitForFunction(()=>!document.getElementById('music').paused);
+ await page.evaluate(()=>{window.__RUN_TEST__.command('jump');window.__RUN_TEST__.advance(.1);});
+ assert.ok((await page.evaluate(()=>window.__RUN_TEST__.snapshot())).player.y>0);
+ await application.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].webContents.send('system-suspend'));
+ assert.equal((await page.evaluate(()=>window.__RUN_TEST__.snapshot())).phase,'paused');
+ await page.locator('#pauseHomeButton').click();await page.locator('#startButton').click();await page.waitForFunction(()=>window.__RUN_TEST__.snapshot().phase==='running');
+ await page.evaluate(()=>window.__RUN_TEST__.finish());
+ await page.locator('#resultPanel').screenshot({path:path.join(root,'game-tests/results/desktop-result.png')});
+ assert.equal(external.length,0);assert.deepEqual(errors,[]);
+ await application.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());
+ await new Promise(resolve=>application.process().once('exit',resolve));application=null;
+ const save=JSON.parse(await readFile(path.join(saveDirectory,'progress.json'),'utf8'));assert.equal(save.unlocked,1);
+ application=await electron.launch(launchOptions());
+ const reopened=await application.firstWindow();await reopened.waitForFunction(()=>window.__RUN_TEST__?.ready());
+ assert.equal((await reopened.evaluate(()=>window.__RUN_TEST__.snapshot())).save.unlocked,1);
+ await application.close();application=null;
+ console.log('PASS: offline desktop launch, sandbox, controller-started audio, jump, suspend, native close save drain, and persisted restart.');
+}finally{if(application)await application.close();await rm(saveDirectory,{recursive:true,force:true});}

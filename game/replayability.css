@@ -1,0 +1,21 @@
+.replay-meta { margin: 0 0 16px; padding-top: 11px; border-top: 1px solid color-mix(in oklch, var(--ink), transparent 78%); }
+.replay-kicker { margin: 0 0 9px; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.replay-badges { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.replay-badge { min-width: 0; padding: 7px 5px 6px; border: 1px solid color-mix(in oklch, var(--ink), transparent 72%); color: color-mix(in oklch, var(--ink), transparent 25%); }
+.replay-badge.is-earned { border-color: var(--coral); background: color-mix(in oklch, var(--yellow), transparent 42%); color: var(--ink); }
+.replay-badge strong, .replay-badge span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.replay-badge strong { font-size: 10px; letter-spacing: .05em; }
+.replay-badge span { margin-top: 4px; font-size: 9px; line-height: 1.2; }
+.replay-next { margin: 8px 0 0; font-size: 11px; line-height: 1.35; }
+.replay-best { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; align-items: baseline; margin-top: 10px; padding-top: 9px; border-top: 1px solid color-mix(in oklch, var(--ink), transparent 85%); }
+.replay-best-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.replay-best strong { font-size: 12px; letter-spacing: .03em; }
+.replay-best small { grid-column: 2; font-size: 10px; }
+.replay-level-meta { display: block; margin-top: 4px; color: color-mix(in oklch, var(--ink), transparent 28%); font-size: 10px; font-weight: 500; }
+@media (max-width: 700px) {
+  .replay-meta { margin-bottom: 16px; }
+  .replay-badge { padding: 7px 4px 6px; }
+  .replay-badge strong { font-size: 9px; }
+  .replay-badge span { font-size: 8px; }
+  .replay-best { margin-top: 11px; }
+}

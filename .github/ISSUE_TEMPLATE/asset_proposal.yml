@@ -1,0 +1,35 @@
+name: Asset proposal
+description: Propose a new raster character, prop, obstacle, scene, or effect.
+title: "[Asset]: "
+labels: ["art", "content"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Asset name
+      placeholder: market canopy stall
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Player-facing use
+      description: Explain where it appears and what it communicates.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference or source
+      description: Include a source raster, reference image, or design notes.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Asset rules
+      options:
+        - label: This proposal is raster-based and does not require generated SVG artwork.
+          required: true
+        - label: I have read docs/ADDING-ASSETS.md.
+          required: true

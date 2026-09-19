@@ -1,0 +1,34 @@
+name: Level proposal
+description: Propose a new block, route beat, encounter, or mechanic.
+title: "[Level]: "
+labels: ["content", "level-design"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Block or encounter name
+    validations:
+      required: true
+  - type: textarea
+    id: route
+    attributes:
+      label: Route concept
+      description: Describe the floor path, elevated path, reaction window, and recovery runway.
+    validations:
+      required: true
+  - type: textarea
+    id: assets
+    attributes:
+      label: Assets and mechanics
+      description: List the scene plate, hazards, platforms, enemies, pickups, and soundtrack.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Level rules
+      options:
+        - label: I have read docs/ADDING-LEVELS.md.
+          required: true
+        - label: The proposal preserves a playable floor fallback and continuous chaser recovery.
+          required: true

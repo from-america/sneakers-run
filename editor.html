@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172329">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<title>Sneakers Run · Level Workshop</title>
+<link rel="icon" href="assets/runtime/app-icon.png">
+<link rel="stylesheet" href="game/editor.css">
+</head>
+<body>
+<main class="editor-shell">
+  <header class="editor-bar">
+    <div class="editor-title"><img src="assets/runtime/app-icon.png" alt=""><div><strong>SNEAKERS RUN</strong><span>LEVEL WORKSHOP · INTERNAL</span></div></div>
+    <label class="stage-picker">SOURCE BLOCK <select id="stageSelect" aria-label="Source block"></select></label>
+    <label class="stage-picker">BACKGROUND SCENERY <select id="sceneSelect" aria-label="Background scenery"></select></label>
+    <div class="history-actions" aria-label="Edit history"><button id="undoButton" disabled title="Undo (⌘Z)">↶ <span>Undo</span></button><button id="redoButton" disabled title="Redo (⇧⌘Z)">↷ <span>Redo</span></button></div>
+    <div class="file-actions"><button id="playgroundButton" title="Load all 100 builder ideas into a test route">Asset playground</button><button id="importButton">Import</button><button id="exportButton">Export JSON</button><button class="accent" id="saveButton">Save draft</button></div>
+  </header>
+
+  <section class="workspace">
+    <aside class="palette" aria-label="Level elements">
+      <div class="panel-heading"><span>ELEMENTS</span><small>DRAG INTO THE ROUTE</small></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="paletteSearch" type="search" placeholder="Find an element" autocomplete="off"></label>
+      <div id="paletteList" class="palette-list"></div>
+    </aside>
+
+    <section class="stage-area" aria-label="Level canvas">
+      <div class="canvas-toolbar">
+        <div class="route-name"><input id="routeName" value="Untitled route" aria-label="Route name"><span id="routeMeta">0 elements · 0 m</span></div>
+        <div class="view-actions">
+          <label class="toggle"><input id="hitboxToggle" type="checkbox"><span>Hitboxes</span></label>
+          <label>GRID <select id="gridSelect" aria-label="Grid size"><option value="1">Off</option><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option></select></label>
+          <button id="zoomOut" aria-label="Zoom out">−</button><output id="zoomLabel">50%</output><button id="zoomIn" aria-label="Zoom in">+</button>
+          <button id="fitButton">Fit route</button>
+        </div>
+      </div>
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="editorCanvas" tabindex="0" aria-label="Editable side-scrolling level. Drag elements here, then use arrow keys to move the selection."></canvas>
+        <div class="canvas-empty" id="emptyState"><strong>Build the first encounter</strong><span>Drag an element from the left, or load a source block above.</span></div>
+        <div class="canvas-status" id="canvasStatus" role="status">Ready</div>
+      </div>
+      <div class="timeline"><span id="worldStart">0</span><div id="minimap" class="minimap"><span id="minimapView"></span></div><span id="worldEnd">0 m</span></div>
+    </section>
+
+    <aside class="inspector" aria-label="Selection inspector">
+      <div class="panel-heading"><span>INSPECTOR</span><small id="selectionKind">NOTHING SELECTED</small></div>
+      <div id="emptyInspector" class="empty-inspector"><strong>Select an element</strong><p>Drag it to move. Use the fields here for exact placement.</p></div>
+      <form id="inspectorForm" hidden>
+        <div class="selection-preview"><canvas id="previewCanvas" width="230" height="150"></canvas><div><strong id="selectionName"></strong><span id="selectionId"></span></div></div>
+        <fieldset><legend>POSITION</legend><div class="field-row"><label>X <input id="xInput" type="number" step="1"></label><label>Y <input id="yInput" type="number" step="1" min="0"></label></div></fieldset>
+        <fieldset id="patrolFields"><legend>PATROL</legend><label class="check-row"><input id="patrolToggle" type="checkbox"><span>Moves left and right</span></label><div class="field-row"><label>RANGE <input id="patrolRange" type="number" min="10" max="500" step="5" value="60"></label><label>SPEED <input id="patrolSpeed" type="number" min="10" max="240" step="5" value="60"></label></div></fieldset>
+        <div class="dimensions"><span>ART SIZE</span><output id="dimensionLabel"></output></div>
+        <div class="inspector-actions"><button type="button" id="duplicateButton">Duplicate</button><button type="button" class="danger" id="deleteButton">Delete</button></div>
+      </form>
+      <section class="route-checks"><div class="panel-heading"><span>ROUTE CHECK</span><small>LIVE</small></div><ul id="routeChecks"></ul></section>
+      <details class="shortcuts"><summary>Keyboard shortcuts</summary><dl><div><dt>Move</dt><dd>Arrow keys</dd></div><div><dt>Move 10</dt><dd>Shift + arrows</dd></div><div><dt>Duplicate</dt><dd>⌘ / Ctrl + D</dd></div><div><dt>Delete</dt><dd>Delete / Backspace</dd></div><div><dt>Undo</dt><dd>⌘ / Ctrl + Z</dd></div></dl></details>
+    </aside>
+  </section>
+  <input id="fileInput" type="file" accept="application/json,.json" hidden>
+</main>
+<div class="small-screen"><strong>LEVEL WORKSHOP</strong><p>This internal tool needs a desktop-sized window so the palette, route, and inspector stay visible together.</p></div>
+<script src="game/editor-loader.js?v=12"></script>
+</body>
+</html>

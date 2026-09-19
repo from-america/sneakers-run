@@ -1,0 +1,81 @@
+{
+  "status": "locally-reviewed",
+  "date": "2026-09-16",
+  "reviewer": "Codex implementation review",
+  "evidence": "tests/art-direction/comparison.html plus truck-roll-v2 perspective raster inspection, authored-pattern browser pass, and truck pulse visual regression",
+  "priorCompositionCommit": "19ff6f0",
+  "userApproval": "Not asserted. Retained runner and suit are the existing references; new streets have local review only.",
+  "criteria": {
+    "runnerStyle": {
+      "verdict": "pass",
+      "evidence": "Compared all ten streets with run-v6-frames/frame-01.png. Broad flat color, dark contour, simpler architecture and quiet asphalt replace painterly detail. Independent reviewer inspected later stages 4, 6 and 10 in context."
+    },
+    "protectedCharacters": {
+      "verdict": "pass",
+      "evidence": "Runner/action/chaser PNGs remain byte-for-byte unchanged from 19ff6f0. Each painted frame retains a single scale on both axes."
+    },
+    "cameraComposition": {
+      "verdict": "pass",
+      "evidence": "Constant scenery-to-runner proportions verified at 390×744, 390×844 and 390×1000; five reference viewports inspected. Quiet pixel extensions remove portrait banding; tile-edge recheck resolved the landscape seam."
+    },
+    "laneReadability": {
+      "verdict": "pass",
+      "evidence": "Empty foreground raster lane, grounded feet and uniformly scaled hazards inspected. Full double jump stays outside HUD/feedback at 1280×800, 390×844, 320×568 and 844×390; short/landscape apex evidence saved alongside comparison."
+    },
+    "uiHierarchy": {
+      "verdict": "pass",
+      "evidence": "Menus clear both characters, HUD uses stable backing, control notes readable, and every block-picker target is at least44px in both dimensions. Independent final review reported no remaining P1/P2 issues."
+    }
+  },
+  "limitations": [
+    "Desktop Chromium with phone/touch emulation; physical devices untested.",
+    "Preserved props and suit retain more shading than the new streets.",
+    "Hash validation preserves a recorded judgment; it does not automate aesthetic judgment."
+  ],
+  "fingerprints": {
+    "assets/art-catalog.json": "7b4e7bae28eb72764df8029376c9402e1db6ded8536108b7702dc70b2a459577",
+    "assets/imagegen/chaser/run-v1.png": "f8227af2263dc455c1aafcdd3db6c964f144b3b3841b8283567781b9f12c2685",
+    "assets/imagegen/enemies/shoe-box-courier/run-v1.png": "04c2bc166508f32e6647f9c99e2e81874d63796f887f8947c8a7ee308546b677",
+    "assets/imagegen/enemies/skateboard-rival/run-v1.png": "95904890058b39c74ca700e94a9db2179770f34d2687e988f33dfd1eac12622d",
+    "assets/imagegen/obstacles/barrel-v1.png": "ff03803b7392317255250361fbdb519bc40ba71b1ad330f3f1c0078766baa375",
+    "assets/imagegen/obstacles/platform-support-v1.png": "60df8d04f74261d9b4b931fa56297963fc12686afb549463ba65d1e6b6cc66e3",
+    "assets/imagegen/obstacles/truck-roll-v2.png": "cc7ff2a23a3c7df2094ccd080e584088f538ec1353653ac7e0fcc7139398bb41",
+    "assets/imagegen/props/car-v1.png": "798fb0974466b6e519c8df0674fffa5aa006eb3aafa9dd84e09fd879b6ca5865",
+    "assets/imagegen/props/coin-icon-v1.png": "e9d0e8f3ee753b372af74dee2502b3160b914d4aa808ac683892e3c112bc55fa",
+    "assets/imagegen/props/coin-v1.png": "48817a15209e4a920d3e3e51c0f57746d5e949a55b9de30227efe75dcbc91638",
+    "assets/imagegen/props/low-v1.png": "b736dfd745d75b904c7e9d0f34be70c66d86ef3111306a05443c195f6fc36c17",
+    "assets/imagegen/props/magnet-v1.png": "e6ca8091ee01e88f2a3bdd871e98ab2532b1c7c2fad41bf343e7602989e5da46",
+    "assets/imagegen/props/platform-v1.png": "a6063ac55dd9e776936a3ffcecd61beb5111b7ea3a7ffe4a8d82a0f0cc7dbf06",
+    "assets/imagegen/props/shield-v1.png": "ca8c012a687f4a48aec68bcc66f78a392072fe1d431708b011fc68f5335b3c54",
+    "assets/imagegen/props/speed-v1.png": "3a51e66c86e85ed248c07ad7ca8d08a4b3f492458b0ed0e61792412861fad3d6",
+    "assets/imagegen/runner/actions/celebrate-v1.png": "c53209fa00a5ccf475522d8d9bae554b64e3affc52cadbf63855d26b35444207",
+    "assets/imagegen/runner/actions/crouch-v1.png": "9b481f25dfd7be42267917b7f5a7ecaddccb53bddb12cf15a01f27aaa386654f",
+    "assets/imagegen/runner/actions/jump-v1.png": "e3f2ef8d9a9fd48fbd3ca241008534f65f0fddb87faa6ad4da3092a025587595",
+    "assets/imagegen/runner/actions/land-v1.png": "9bde51871b06045d28e48bad9f68009f006e02b1baf8b30a42e28f137dfdb5ac",
+    "assets/imagegen/runner/actions/roll-v1.png": "2eb1f0a39eaa8bdb27dd692e5e0fcfd7885ae47cce5a8e935938e6eb31156ce0",
+    "assets/imagegen/runner/actions/stumble-v1.png": "35a311e4e2afe22b840e781f300956479c3ae042545514e8cecd68254784d895",
+    "assets/imagegen/runner/run-v6-frames/frame-01.png": "098b0f114e9da99abef354ca0c8fe8182add24226311395f60762887f94a741f",
+    "assets/imagegen/runner/run-v6.png": "fe70a37c39b2506718d102b978a698586cbd97923621aab791317de8f8cc1728",
+    "assets/imagegen/streets-v2/01-waterfront-flat-v2.png": "93edee0772be3833f9b63a6477c79842901e0b3ae29dcf9f25538ee2871660c8",
+    "assets/imagegen/streets-v2/02-rooftop-flat-v2.png": "58785581b742d9c2eec86d9219328a5b656d0fab588b2f4ac3af5cdd2a8e0581",
+    "assets/imagegen/streets-v2/03-underpass-flat-v2.png": "3217775b09dd3220aa13fd2f34d2f68906a925a5cae51ee047d5ef2f06ba2dec",
+    "assets/imagegen/streets-v2/04-market-flat-v2.png": "ed0e8c088d704421158fede89ebecd1fead9ec899c618fd615bd48eb7c3834ba",
+    "assets/imagegen/streets-v2/05-subway-flat-v2.png": "8e00795927763edc44dd9ec3b87e20d7a064d1c2334dfea1464a02518dc187c0",
+    "assets/imagegen/streets-v2/06-basketball-flat-v2.png": "e109a2e4a26ba20cef1793cf16b96ab84986013a8de8de5d2e29889a0f09447a",
+    "assets/imagegen/streets-v2/07-bridge-flat-v2.png": "ebed485542646c1f2bb4c536c0e435f170195d27dd4b8364054500388c66de0c",
+    "assets/imagegen/streets-v2/08-crosswalk-flat-v2.png": "c111042f98ce9dfa2f94ae15bb4a72cb31a5aec5ef6d6880f9638f06984a5b59",
+    "assets/imagegen/streets-v2/09-warehouse-flat-v2.png": "12b62450f7ee30b3ef8fcbba81afd9680003662a8deab9907bc39f5df2863ac3",
+    "assets/imagegen/streets-v2/10-dawn-flat-v2.png": "740ff80294e662198904e409cb6fdbae2a0012d4bef2c43a492a60a4098c43ed",
+    "assets/imagegen/streets-v2/manifest.js": "889a8533b2316ec722cc4c88e2f17c86c15c6dc24a302248629b3fbf37a3b5c1",
+    "assets/imagegen/streets-v2/prompts.json": "47a5d8965274c0e2a9e4a969986b1141b14c5ae6b82d8867fa35df03ad749a05",
+    "assets/imagegen/vfx/coin-v1.png": "fb28d5a27bbb61473b8e7a63de6ea1ca171b4a3338978c98d93e6e9b5f2eb35f",
+    "assets/imagegen/vfx/dust-v1.png": "697774e3937f3b2dd4a41b898a8291959bc3edd475ca519f5bed820b78991c15",
+    "assets/imagegen/vfx/impact-v1.png": "b0f21d209d10e971d12d9df8c8a2d1f095da810aadc8752643bcd6d0f6bda086",
+    "assets/imagegen/vfx/power-v1.png": "d3a500e62b147aa399689a0b5a52f81604aa6ee2a51edf5ed516eec75ff28434",
+    "index.html": "7f9cb354cb23108bc2e15d38471e7c19438d23b057348f7704ed2b9f0f29dd57",
+    "main.js": "c0652033020f26d13181dde088be85445146064d4614847a4944692579708fb9",
+    "renderer.js": "af0c828c826c033a72fd9052a412c71488fac1b450f9b3a5dce973c8b076020d",
+    "run-model.js": "fc239e69215b1ff55f677bc24858af962a79ece1411e897c17d93db3c13cc12b",
+    "styles.css": "26ff02cf743871c154db36f56510d6a403295c8af1991e169f95999d45506119"
+  }
+}

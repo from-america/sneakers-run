@@ -1,0 +1,60 @@
+{
+  "generatedBy": "ChatGPT Image Gen",
+  "format": "PNG raster",
+  "runtimePolicy": "All non-GUI gameplay art uses reviewed raster assets.",
+  "assets": {
+    "runner": [
+      { "file": "runner/idle-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "runner/run-v6.png", "frames": 8, "status": "generated-raster" },
+      { "file": "runner/actions/jump-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/roll-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/crouch-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/land-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/stumble-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/celebrate-v1.png", "frames": 4, "status": "generated-raster" },
+      { "file": "runner/actions/rush-v1.png", "frames": 4, "status": "generated-raster" }
+    ],
+    "chaser": [
+      { "file": "chaser/run-gray-suit-v1.png", "frames": 8, "status": "generated-raster", "reference": "attached two-man chaser reference: bald gray-suit man" },
+      { "file": "chaser/run-blue-suit-v1.png", "frames": 8, "status": "generated-raster", "reference": "attached two-man chaser reference: brown-haired blue-suit man" },
+      { "file": "chaser/start-point-gray-suit-v1.png", "frames": 6, "status": "generated-raster", "action": "point then launch", "reference": "attached two-man chaser reference: bald gray-suit man" },
+      { "file": "chaser/start-point-blue-suit-v1.png", "frames": 6, "status": "generated-raster", "action": "point then launch", "reference": "attached two-man chaser reference: brown-haired blue-suit man" },
+      { "file": "chaser/out-of-breath-gray-suit-v1.png", "frames": 6, "status": "generated-raster", "action": "finish fatigue loop", "reference": "attached two-man chaser reference: bald gray-suit man" },
+      { "file": "chaser/out-of-breath-blue-suit-v1.png", "frames": 6, "status": "generated-raster", "action": "finish fatigue loop", "reference": "attached two-man chaser reference: brown-haired blue-suit man" },
+      { "file": "chaser/jump-gray-suit-v1.png", "frames": 4, "status": "generated-raster", "action": "jump path", "reference": "attached two-man chaser reference: bald gray-suit man" },
+      { "file": "chaser/jump-blue-suit-v1.png", "frames": 4, "status": "generated-raster", "action": "jump path", "reference": "attached two-man chaser reference: brown-haired blue-suit man" },
+      { "file": "chaser/roll-gray-suit-v1.png", "frames": 4, "status": "generated-raster", "action": "roll path", "reference": "attached two-man chaser reference: bald gray-suit man" },
+      { "file": "chaser/roll-blue-suit-v1.png", "frames": 4, "status": "generated-raster", "action": "roll path", "reference": "attached two-man chaser reference: brown-haired blue-suit man" }
+    ],
+    "props": [
+      { "file": "props/car-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/low-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/platform-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/coin-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/coin-icon-v1.png", "frames": 1, "status": "generated-raster", "usage": "HUD icon" },
+      { "file": "props/shield-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/speed-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "props/magnet-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "obstacles/overhead-gate-v2.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/platform-support-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/street-sweeper-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/street-shutter-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/bollards-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/crane-hook-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/barrel-v1.png", "frames": 1, "status": "generated-raster" },
+      { "file": "obstacles/conveyor-v1.png", "frames": 1, "status": "generated-raster" }
+    ],
+    "vfx": [
+      { "file": "vfx/dust-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "vfx/coin-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "vfx/power-v1.png", "frames": 2, "status": "generated-raster" },
+      { "file": "vfx/impact-v1.png", "frames": 2, "status": "generated-raster" }
+    ],
+    "preserved": [
+      { "file": "../suit-generated.webp", "status": "approved-existing-guide", "reason": "Preserve existing directly-behind runner suit treatment." }
+    ],
+    "backgrounds": [
+      { "directory": "streets-v2", "files": 10, "status": "generated-raster", "provenance": "ChatGPT Image Gen", "review": "See ART-DIRECTION.md; local review only." }
+    ]
+  }
+}

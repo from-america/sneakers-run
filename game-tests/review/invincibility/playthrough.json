@@ -1,0 +1,86 @@
+{
+  "seed": 42,
+  "invincibility": true,
+  "results": [
+    {
+      "stage": 1,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 25,
+      "invincible": true
+    },
+    {
+      "stage": 2,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 22,
+      "invincible": true
+    },
+    {
+      "stage": 3,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 28,
+      "invincible": true
+    },
+    {
+      "stage": 4,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 28,
+      "invincible": true
+    },
+    {
+      "stage": 5,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 25,
+      "invincible": true
+    },
+    {
+      "stage": 6,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 28,
+      "invincible": true
+    },
+    {
+      "stage": 7,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 30,
+      "invincible": true
+    },
+    {
+      "stage": 8,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 25,
+      "invincible": true
+    },
+    {
+      "stage": 9,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 28,
+      "invincible": true
+    },
+    {
+      "stage": 10,
+      "phase": "cleared",
+      "hits": 0,
+      "stomps": 0,
+      "coins": 31,
+      "invincible": true
+    }
+  ]
+}

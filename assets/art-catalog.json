@@ -1,0 +1,637 @@
+{
+  "run": {
+    "src": "assets/imagegen/runner/run-v6.png",
+    "frames": [
+      {
+        "x": 148,
+        "y": 66,
+        "width": 969,
+        "height": 1149
+      },
+      {
+        "x": 1409,
+        "y": 66,
+        "width": 965,
+        "height": 1136
+      },
+      {
+        "x": 2609,
+        "y": 72,
+        "width": 956,
+        "height": 1141
+      },
+      {
+        "x": 3918,
+        "y": 61,
+        "width": 946,
+        "height": 1139
+      },
+      {
+        "x": 5182,
+        "y": 66,
+        "width": 930,
+        "height": 1150
+      },
+      {
+        "x": 6462,
+        "y": 71,
+        "width": 934,
+        "height": 1095
+      },
+      {
+        "x": 7753,
+        "y": 64,
+        "width": 894,
+        "height": 1150
+      },
+      {
+        "x": 8950,
+        "y": 66,
+        "width": 962,
+        "height": 1139
+      }
+    ],
+    "width": 969,
+    "height": 1150
+  },
+  "jump": {
+    "src": "assets/imagegen/runner/actions/jump-v1.png",
+    "frames": [
+      {
+        "x": 109,
+        "y": 217,
+        "width": 320,
+        "height": 418
+      },
+      {
+        "x": 626,
+        "y": 108,
+        "width": 382,
+        "height": 457
+      },
+      {
+        "x": 1127,
+        "y": 76,
+        "width": 379,
+        "height": 440
+      },
+      {
+        "x": 1692,
+        "y": 169,
+        "width": 367,
+        "height": 429
+      }
+    ],
+    "width": 382,
+    "height": 457
+  },
+  "roll": {
+    "src": "assets/imagegen/runner/actions/roll-v1.png",
+    "frames": [
+      {
+        "x": 88,
+        "y": 168,
+        "width": 382,
+        "height": 376
+      },
+      {
+        "x": 623,
+        "y": 226,
+        "width": 370,
+        "height": 319
+      },
+      {
+        "x": 1117,
+        "y": 211,
+        "width": 459,
+        "height": 333
+      },
+      {
+        "x": 1665,
+        "y": 168,
+        "width": 437,
+        "height": 377
+      }
+    ],
+    "width": 459,
+    "height": 377
+  },
+  "crouch": {
+    "src": "assets/imagegen/runner/actions/crouch-v1.png",
+    "frames": [
+      {
+        "x": 56,
+        "y": 171,
+        "width": 434,
+        "height": 416
+      },
+      {
+        "x": 594,
+        "y": 198,
+        "width": 422,
+        "height": 384
+      },
+      {
+        "x": 1143,
+        "y": 194,
+        "width": 434,
+        "height": 393
+      },
+      {
+        "x": 1692,
+        "y": 157,
+        "width": 409,
+        "height": 429
+      }
+    ],
+    "width": 434,
+    "height": 429
+  },
+  "land": {
+    "src": "assets/imagegen/runner/actions/land-v1.png",
+    "frames": [
+      {
+        "x": 78,
+        "y": 90,
+        "width": 434,
+        "height": 487
+      },
+      {
+        "x": 678,
+        "y": 122,
+        "width": 311,
+        "height": 507
+      },
+      {
+        "x": 1191,
+        "y": 208,
+        "width": 353,
+        "height": 421
+      },
+      {
+        "x": 1640,
+        "y": 107,
+        "width": 432,
+        "height": 513
+      }
+    ],
+    "width": 434,
+    "height": 513
+  },
+  "stumble": {
+    "src": "assets/imagegen/runner/actions/stumble-v1.png",
+    "frames": [
+      {
+        "x": 40,
+        "y": 102,
+        "width": 499,
+        "height": 502
+      },
+      {
+        "x": 598,
+        "y": 127,
+        "width": 453,
+        "height": 476
+      },
+      {
+        "x": 1146,
+        "y": 229,
+        "width": 446,
+        "height": 376
+      },
+      {
+        "x": 1688,
+        "y": 124,
+        "width": 431,
+        "height": 478
+      }
+    ],
+    "width": 499,
+    "height": 502
+  },
+  "celebrate": {
+    "src": "assets/imagegen/runner/actions/celebrate-v1.png",
+    "frames": [
+      {
+        "x": 51,
+        "y": 85,
+        "width": 457,
+        "height": 528
+      },
+      {
+        "x": 590,
+        "y": 84,
+        "width": 439,
+        "height": 529
+      },
+      {
+        "x": 1138,
+        "y": 61,
+        "width": 410,
+        "height": 520
+      },
+      {
+        "x": 1700,
+        "y": 85,
+        "width": 429,
+        "height": 534
+      }
+    ],
+    "width": 457,
+    "height": 534
+  },
+  "chaser": {
+    "src": "assets/imagegen/chaser/run-gray-suit-v1.png",
+    "frames": [
+      {"x": 15, "y": 123, "width": 263, "height": 473},
+      {"x": 317, "y": 137, "width": 196, "height": 459},
+      {"x": 540, "y": 121, "width": 273, "height": 469},
+      {"x": 808, "y": 117, "width": 295, "height": 446},
+      {"x": 1101, "y": 123, "width": 263, "height": 473},
+      {"x": 1404, "y": 149, "width": 190, "height": 447},
+      {"x": 1617, "y": 125, "width": 276, "height": 465},
+      {"x": 1894, "y": 118, "width": 277, "height": 446}
+    ],
+    "width": 295,
+    "height": 473
+  },
+  "barrier": {
+    "src": "assets/imagegen/props/low-v1.png",
+    "frames": [
+      {
+        "x": 37,
+        "y": 222,
+        "width": 825,
+        "height": 493
+      },
+      {
+        "x": 917,
+        "y": 166,
+        "width": 824,
+        "height": 549
+      }
+    ],
+    "width": 825,
+    "height": 549
+  },
+  "car": {
+    "src": "assets/imagegen/props/car-idle-v2.png",
+    "frames": [
+      {
+        "x": 41,
+        "y": 261,
+        "width": 815,
+        "height": 439
+      },
+      {
+        "x": 924,
+        "y": 197,
+        "width": 810,
+        "height": 503
+      }
+    ],
+    "width": 815,
+    "height": 503
+  },
+  "gate": {
+    "src": "assets/imagegen/obstacles/truck-roll-v2.png",
+    "frames": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1480,
+        "height": 981
+      }
+    ],
+    "width": 1480,
+    "height": 981
+  },
+  "barrel": {
+    "src": "assets/imagegen/obstacles/barrel-v1.png",
+    "frames": [
+      {
+        "x": 106,
+        "y": 221,
+        "width": 678,
+        "height": 490
+      },
+      {
+        "x": 967,
+        "y": 196,
+        "width": 744,
+        "height": 537
+      }
+    ],
+    "width": 744,
+    "height": 537
+  },
+  "platform": {
+    "src": "assets/imagegen/props/platform-v1.png",
+    "frames": [
+      {
+        "x": 25,
+        "y": 213,
+        "width": 834,
+        "height": 498
+      },
+      {
+        "x": 914,
+        "y": 213,
+        "width": 833,
+        "height": 498
+      }
+    ],
+    "width": 834,
+    "height": 498
+  },
+  "support": {
+    "src": "assets/imagegen/obstacles/platform-support-v1.png",
+    "frames": [
+      {
+        "x": 255,
+        "y": 21,
+        "width": 515,
+        "height": 1497
+      }
+    ],
+    "width": 515,
+    "height": 1497
+  },
+  "coin": {
+    "src": "assets/imagegen/props/coin-v1.png",
+    "frames": [
+      {
+        "x": 125,
+        "y": 0,
+        "width": 762,
+        "height": 887
+      },
+      {
+        "x": 887,
+        "y": 0,
+        "width": 625,
+        "height": 887
+      }
+    ],
+    "width": 762,
+    "height": 887
+  },
+  "shield": {
+    "src": "assets/imagegen/props/shield-v1.png",
+    "frames": [
+      {
+        "x": 102,
+        "y": 100,
+        "width": 680,
+        "height": 682
+      },
+      {
+        "x": 949,
+        "y": 73,
+        "width": 766,
+        "height": 731
+      }
+    ],
+    "width": 766,
+    "height": 731
+  },
+  "magnet": {
+    "src": "assets/imagegen/props/magnet-v1.png",
+    "frames": [
+      {
+        "x": 69,
+        "y": 157,
+        "width": 762,
+        "height": 563
+      },
+      {
+        "x": 935,
+        "y": 129,
+        "width": 799,
+        "height": 622
+      }
+    ],
+    "width": 799,
+    "height": 622
+  },
+  "speed": {
+    "src": "assets/imagegen/props/speed-v1.png",
+    "frames": [
+      {
+        "x": 243,
+        "y": 94,
+        "width": 488,
+        "height": 693
+      },
+      {
+        "x": 1094,
+        "y": 89,
+        "width": 517,
+        "height": 702
+      }
+    ],
+    "width": 517,
+    "height": 702
+  },
+  "dust": {
+    "src": "assets/imagegen/vfx/dust-v1.png",
+    "frames": [
+      {
+        "x": 244,
+        "y": 313,
+        "width": 458,
+        "height": 352
+      },
+      {
+        "x": 989,
+        "y": 234,
+        "width": 720,
+        "height": 490
+      }
+    ],
+    "width": 720,
+    "height": 490
+  },
+  "impact": {
+    "src": "assets/imagegen/vfx/impact-v1.png",
+    "frames": [
+      {
+        "x": 248,
+        "y": 0,
+        "width": 639,
+        "height": 666
+      },
+      {
+        "x": 951,
+        "y": 58,
+        "width": 774,
+        "height": 741
+      }
+    ],
+    "width": 774,
+    "height": 741
+  },
+  "spark": {
+    "src": "assets/imagegen/vfx/coin-v1.png",
+    "frames": [
+      {
+        "x": 103,
+        "y": 0,
+        "width": 784,
+        "height": 887
+      },
+      {
+        "x": 887,
+        "y": 0,
+        "width": 703,
+        "height": 887
+      }
+    ],
+    "width": 784,
+    "height": 887
+  },
+  "power": {
+    "src": "assets/imagegen/vfx/power-v1.png",
+    "frames": [
+      {
+        "x": 203,
+        "y": 201,
+        "width": 479,
+        "height": 466
+      },
+      {
+        "x": 919,
+        "y": 38,
+        "width": 809,
+        "height": 792
+      }
+    ],
+    "width": 809,
+    "height": 792
+  },
+  "rival": {
+    "src": "assets/imagegen/enemies/skateboard-rival/run-v1.png",
+    "frames": [
+      {
+        "x": 32,
+        "y": 277,
+        "width": 224,
+        "height": 285
+      },
+      {
+        "x": 273,
+        "y": 273,
+        "width": 247,
+        "height": 289
+      },
+      {
+        "x": 520,
+        "y": 245,
+        "width": 260,
+        "height": 317
+      },
+      {
+        "x": 780,
+        "y": 254,
+        "width": 260,
+        "height": 308
+      },
+      {
+        "x": 1040,
+        "y": 259,
+        "width": 258,
+        "height": 303
+      },
+      {
+        "x": 1323,
+        "y": 284,
+        "width": 237,
+        "height": 279
+      },
+      {
+        "x": 1560,
+        "y": 263,
+        "width": 260,
+        "height": 299
+      },
+      {
+        "x": 1820,
+        "y": 265,
+        "width": 232,
+        "height": 297
+      }
+    ],
+    "width": 260,
+    "height": 317
+  },
+  "courier": {
+    "src": "assets/imagegen/enemies/shoe-box-courier/run-v1.png",
+    "frames": [
+      {
+        "x": 12,
+        "y": 160,
+        "width": 260,
+        "height": 388
+      },
+      {
+        "x": 272,
+        "y": 162,
+        "width": 272,
+        "height": 387
+      },
+      {
+        "x": 544,
+        "y": 177,
+        "width": 272,
+        "height": 373
+      },
+      {
+        "x": 816,
+        "y": 173,
+        "width": 272,
+        "height": 377
+      },
+      {
+        "x": 1088,
+        "y": 171,
+        "width": 272,
+        "height": 378
+      },
+      {
+        "x": 1360,
+        "y": 180,
+        "width": 272,
+        "height": 370
+      },
+      {
+        "x": 1632,
+        "y": 176,
+        "width": 272,
+        "height": 373
+      },
+      {
+        "x": 1904,
+        "y": 178,
+        "width": 258,
+        "height": 372
+      }
+    ],
+    "width": 272,
+    "height": 388
+  },
+  "chaser2": {
+    "src": "assets/imagegen/chaser/run-blue-suit-v1.png",
+    "frames": [
+      {"x": 15, "y": 118, "width": 281, "height": 502},
+      {"x": 322, "y": 129, "width": 218, "height": 491},
+      {"x": 541, "y": 118, "width": 236, "height": 509},
+      {"x": 782, "y": 95, "width": 313, "height": 502},
+      {"x": 1078, "y": 111, "width": 276, "height": 510},
+      {"x": 1389, "y": 135, "width": 200, "height": 489},
+      {"x": 1603, "y": 117, "width": 254, "height": 510},
+      {"x": 1854, "y": 97, "width": 313, "height": 496}
+    ],
+    "width": 313,
+    "height": 510
+  }
+}

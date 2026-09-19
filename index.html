@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#172329">
+<meta name="description" content="Sneakers Run, a city escape game from Famous Moji.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<title>Sneakers Run · Famous Moji</title>
+<link id="favicon" rel="icon" type="image/png" href="assets/runtime/coin-favicon-a.png">
+<link rel="preload" as="image" fetchpriority="high" href="assets/runtime/01-sneaker-shops-flat-v1.webp">
+<link rel="preload" as="image" fetchpriority="high" href="assets/runtime/home-runner.webp">
+<link rel="preload" as="image" fetchpriority="high" href="assets/runtime/home-chaser-gray.webp">
+<link rel="preload" as="image" fetchpriority="high" href="assets/runtime/home-chaser-blue.webp">
+<link rel="stylesheet" href="game/game.css?v=10">
+</head>
+<body>
+<main id="app" class="arcade" data-screen="loading">
+<header class="masthead" id="masthead" hidden>
+<a class="brand" href="/" id="brandLink">FAMOUS MOJI<span>ARCADE DEPT.</span></a>
+<span class="edition">SNEAKERS RUN <span class="edition-divider">/</span> CITY ESCAPE</span>
+<div class="toolbar"><button id="muteButton" aria-label="Mute all audio" aria-pressed="false">SOUND <span id="muteLabel">ON</span></button><button id="fullscreenButton" aria-label="Enter fullscreen">⛶</button><button id="pauseButton" disabled aria-label="Pause game">Ⅱ</button></div>
+</header>
+<section class="scoreboard" id="scoreboard" aria-label="Run status" hidden>
+<div class="chapter"><span id="chapterNumber">01 / 10</span><strong id="chapterName">The getaway</strong></div>
+<div class="chances" id="chances" aria-label="Three chances"><span id="lives">● ● ●</span><small id="livesLabel">3 CHANCES</small></div>
+<div class="streak-badge" id="streakBadge" aria-live="polite" hidden><span>STREAK</span><output id="streakCount">0</output><small>clean escapes</small></div>
+<div class="score"><span>SCORE</span><output id="score">000000</output></div><div class="coins"><span>COINS</span><output id="coins">0</output></div>
+<div class="route-progress" role="progressbar" aria-label="Block progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><span id="progressFill"></span></div>
+</section>
+<section class="playfield" id="playfield" aria-label="City playfield">
+<div class="home-preview" id="homePreview" aria-hidden="true">
+<img class="home-preview-backdrop" src="assets/runtime/01-sneaker-shops-flat-v1.webp" alt="" fetchpriority="high">
+<div class="home-preview-character home-preview-chaser-gray"></div><div class="home-preview-character home-preview-chaser-blue"></div><div class="home-preview-character home-preview-runner"></div>
+</div>
+<canvas id="game" role="img" aria-label="Runner escaping through the city" aria-describedby="controlHelp"></canvas>
+<div id="cue" class="cue" role="status" aria-live="polite" hidden><span id="cueSymbol" aria-hidden="true">↑</span><div><small class="cue-label">NEXT MOVE</small><strong id="cueAction">JUMP</strong><span id="cueHint">Space / ↑</span></div><time id="cueTime" class="cue-time" aria-hidden="true">1.2s</time></div>
+<div id="introDialogue" class="intro-dialogue" role="status" aria-live="polite" hidden><small id="introSpeaker">SUIT 1</small><strong id="introLine">THERE!</strong></div>
+<div id="feedback" class="feedback" role="status" aria-live="polite" hidden><span id="feedbackLabel">MOVE</span><strong id="feedbackText"></strong><small id="feedbackMeta"></small></div><div id="power" class="power" hidden></div><div id="countdown" class="countdown" role="status" hidden>3</div>
+<section class="panel home" id="homePanel" aria-labelledby="homeTitle">
+<h1 id="homeTitle">Sneakers Run</h1>
+<div class="home-actions" aria-label="Main menu">
+<button class="primary" id="startButton" disabled>Start</button>
+<button class="secondary" id="settingsButton">Settings</button>
+</div>
+<p class="home-loading" id="loadingStatus" role="status" aria-live="polite"><output id="loadPercent">0%</output></p>
+<div id="levelList" class="level-list home-level-list" aria-label="Choose a block"></div>
+<div class="home-legacy" aria-hidden="true" hidden><button id="endlessButton" disabled tabindex="-1" aria-label="Endless"></button></div>
+</section>
+<section class="panel menu" id="pausePanel" aria-labelledby="pauseTitle" hidden>
+<p class="eyebrow" id="pauseReason">Paused</p><h2 id="pauseTitle">Take five</h2><p class="pause-copy" id="pauseCopy">Your run is frozen. Resume when you’re ready.</p>
+<button class="primary" id="resumeButton">Resume <span>→</span></button><button class="secondary" id="pauseSettingsButton">Settings</button>
+<div class="menu-links"><button id="restartButton">Restart</button><button id="pauseHomeButton">Main menu</button></div>
+</section>
+<section class="panel result" id="resultPanel" aria-labelledby="resultTitle" hidden>
+<p class="eyebrow" id="resultEyebrow">Level complete</p><h2 id="resultTitle">Level complete</h2><p class="result-copy" id="resultCopy"></p>
+<dl class="result-stats"><div><dt>SCORE</dt><dd id="resultScore">0</dd></div><div><dt>COINS</dt><dd id="resultCoins">0</dd></div><div><dt>BEST STREAK</dt><dd id="resultStreak">0</dd></div></dl>
+<ul id="objectives" class="objectives" aria-label="Level objectives"></ul><button class="primary" id="resultPrimary">Play again <span>↗</span></button>
+<div class="menu-links"><button id="resultRetry">Replay level</button><button id="resultHome">Main menu</button></div>
+</section>
+<section class="panel settings" id="settingsPanel" aria-labelledby="settingsTitle" hidden>
+<div class="panel-top"><div><p class="eyebrow">Settings</p><h2 id="settingsTitle">Settings</h2></div><button class="close" data-back aria-label="Close settings">✕</button></div>
+<div class="settings-body">
+<label class="setting"><span>Pace<small>Applies to your next run</small></span><select id="pace"><option value="standard">Standard · 3 chances</option><option value="relaxed">Relaxed · 5 chances</option></select></label>
+<label class="setting"><span>Music</span><input id="musicVolume" type="range" min="0" max="100" value="28" aria-label="Music volume"></label>
+<label class="setting"><span>Sound effects</span><input id="effectsVolume" type="range" min="0" max="100" value="65" aria-label="Sound effects volume"></label>
+<label class="setting"><span>Move hints</span><input id="hintsToggle" type="checkbox" checked></label>
+<label class="setting"><span>Reduced motion</span><input id="motionToggle" type="checkbox"></label>
+<label class="setting"><span>Quieter background</span><input id="contrastToggle" type="checkbox"></label>
+<div class="setting-action"><button class="secondary" id="unlockAllButton" type="button">Unlock all levels</button></div>
+<div class="binding-row"><span>Keyboard</span><button id="bindJump">Jump: Space</button><button id="bindRoll">Roll: ↓</button></div><p id="bindNotice" class="binding-notice" role="status" hidden></p>
+<div class="controls-reference" id="controlHelp">
+<div><strong>JUMP</strong><span>Space / ↑ / W · controller A</span><p>Press again in the air for a double jump.</p></div>
+<div><strong>ROLL</strong><span>↓ / S · controller B</span><p>Hold to stay low. In the air, press to drop and roll.</p></div>
+<div><strong>PAUSE</strong><span>Esc / P · controller Menu</span><p>Fullscreen: F11 or Alt + Enter.</p></div>
+</div></div><button class="primary" id="settingsDone">DONE <span>✓</span></button>
+</section>
+<section class="panel error" id="errorPanel" aria-labelledby="errorTitle" hidden>
+<p class="eyebrow">Load error</p><h2 id="errorTitle">Could not load</h2><p id="errorMessage">Some game files could not be loaded. Check your connection and try again.</p><button class="primary" id="reloadButton">Try again <span>↻</span></button>
+</section>
+</section>
+<footer class="control-deck" id="controlDeck" hidden>
+<div class="control-note"><strong id="controlTitle"></strong><span id="controlSubtitle"></span></div>
+<div class="action-buttons" aria-label="Game controls"><button id="rollButton" disabled aria-label="Roll. Hold to stay low."><kbd id="rollKey">↓</kbd><span>ROLL<small>HOLD TO STAY LOW</small></span></button><button id="jumpButton" disabled aria-label="Jump. Press again in the air for a double jump."><kbd id="jumpKey">SPACE</kbd><span>JUMP<small>PRESS TWICE TO DOUBLE</small></span></button></div>
+<button id="quitButton" class="quit" hidden>Quit game</button>
+</footer>
+<p id="saveNotice" class="save-notice" role="status" hidden>Could not save progress.</p><p id="announcer" class="sr-only" role="status" aria-live="polite"></p>
+<audio id="music" src="assets/music/sneakers-run-lite.mp3" preload="none"></audio><audio id="dialogue" src="assets/audio/intro-dialogue.mp3" preload="none"></audio>
+</main>
+<script src="game/app-loader.js?v=18"></script>
+<script defer src="game/replayability.js?v=6"></script>
+</body></html>

@@ -1,0 +1,3082 @@
+{
+  "generatedAt": "2026-09-19T06:19:33.758Z",
+  "baseUrl": "http://127.0.0.1:4188",
+  "seed": 42,
+  "captures": [
+    {
+      "file": "home-desktop.jpg",
+      "level": null,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "home",
+      "target": "exact home title",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 80,
+          "top": 574,
+          "right": 1020,
+          "bottom": 739
+        },
+        "layerCounts": {
+          "foreground": 3
+        },
+        "drawCount": 3,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-opening-desktop.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1459,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-middle-desktop.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "street-release:96",
+      "world": 24464,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -126,
+          "top": 85,
+          "right": 1293,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 23,
+          "support": 8
+        },
+        "drawCount": 32,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-finish-arrival-desktop.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:0:0",
+      "world": 51053,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -12,
+          "top": 143,
+          "right": 954,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-opening-desktop.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1505,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 13
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-middle-desktop.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "bridge-light:68",
+      "world": 20774,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -186,
+          "top": 259,
+          "right": 1312,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 13
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-finish-arrival-desktop.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:1:0",
+      "world": 39248,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -27,
+          "top": 143,
+          "right": 953,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-opening-desktop.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 373,
+          "right": 1408,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-middle-desktop.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "crowd-crossing:93",
+      "world": 25274,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -249,
+          "top": 166,
+          "right": 1490,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 18,
+          "support": 4
+        },
+        "drawCount": 23,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-finish-arrival-desktop.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:2:0",
+      "world": 46173,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -39,
+          "top": 143,
+          "right": 927,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-opening-desktop.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 195,
+          "right": 1591,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11,
+          "support": 4
+        },
+        "drawCount": 15,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-middle-desktop.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "moon-rail:42",
+      "world": 11212,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -63,
+          "top": 81,
+          "right": 1547,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 16,
+          "support": 8
+        },
+        "drawCount": 25,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-finish-arrival-desktop.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:3:0",
+      "world": 27731,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -8,
+          "top": 137,
+          "right": 1164,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-opening-desktop.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 226,
+          "right": 2052,
+          "bottom": 546
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-middle-desktop.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "tunnel-mouth:87",
+      "world": 24402,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": -37,
+          "top": 79,
+          "right": 1321,
+          "bottom": 546
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 22,
+          "support": 4
+        },
+        "drawCount": 27,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-finish-arrival-desktop.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:4:0",
+      "world": 48474,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 10,
+          "top": 79,
+          "right": 1142,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-opening-desktop.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1537,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-middle-desktop.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "hard-street-release:103",
+      "world": 24379,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": -147,
+          "top": 85,
+          "right": 1259,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 23,
+          "support": 8
+        },
+        "drawCount": 32,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-finish-arrival-desktop.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:5:0",
+      "world": 50745,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 3,
+          "top": 143,
+          "right": 968,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-opening-desktop.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1593,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-middle-desktop.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "baggage-claim:111",
+      "world": 29759,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -311,
+          "top": 203,
+          "right": 1673,
+          "bottom": 530
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 13,
+          "support": 2
+        },
+        "drawCount": 16,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-finish-arrival-desktop.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:6:0",
+      "world": 55434,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -39,
+          "top": 143,
+          "right": 927,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-opening-desktop.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1473,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-middle-desktop.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "field-entry:111",
+      "world": 29239,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": -179,
+          "top": 160,
+          "right": 1601,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 17,
+          "support": 6
+        },
+        "drawCount": 24,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-finish-arrival-desktop.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:7:0",
+      "world": 56254,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 24,
+          "top": 23,
+          "right": 1138,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-opening-desktop.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1593,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-middle-desktop.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "belt-entry:112",
+      "world": 29439,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -311,
+          "top": 203,
+          "right": 1525,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 22,
+          "support": 2
+        },
+        "drawCount": 25,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-finish-arrival-desktop.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:8:0",
+      "world": 59886,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -35,
+          "top": 143,
+          "right": 931,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-10-opening-desktop.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 64,
+          "top": 376,
+          "right": 1459,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "foreground": 11
+        },
+        "drawCount": 11,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-middle-desktop.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "crowd-entry:119",
+      "world": 29139,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": -252,
+          "top": 81,
+          "right": 1615,
+          "bottom": 508
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 19,
+          "support": 8
+        },
+        "drawCount": 28,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-finish-arrival-desktop.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:9:0",
+      "world": 61807,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 5,
+          "top": 11,
+          "right": 1143,
+          "bottom": 523
+        },
+        "layerCounts": {
+          "background": 3,
+          "foreground": 11
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "home-phone.jpg",
+      "level": null,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "home",
+      "target": "exact home title",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 750,
+          "right": 301,
+          "bottom": 819
+        },
+        "layerCounts": {
+          "foreground": 3
+        },
+        "drawCount": 3,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-opening-phone.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-middle-phone.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "street-release:96",
+      "world": 24488,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -76,
+          "top": 218,
+          "right": 534,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 18,
+          "support": 8
+        },
+        "drawCount": 27,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-finish-arrival-phone.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:0:0",
+      "world": 51053,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -6,
+          "top": 231,
+          "right": 490,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-opening-phone.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-middle-phone.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "bridge-light:68",
+      "world": 20798,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -107,
+          "top": 291,
+          "right": 460,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 12
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-finish-arrival-phone.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:1:0",
+      "world": 39248,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -14,
+          "top": 248,
+          "right": 489,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-opening-phone.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-middle-phone.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "crowd-crossing:93",
+      "world": 25298,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -139,
+          "top": 266,
+          "right": 516,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 12,
+          "support": 4
+        },
+        "drawCount": 17,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-finish-arrival-phone.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:2:0",
+      "world": 46173,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -20,
+          "top": 248,
+          "right": 476,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-opening-phone.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-middle-phone.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "moon-rail:42",
+      "world": 11228,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -40,
+          "top": 198,
+          "right": 497,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 11,
+          "support": 4
+        },
+        "drawCount": 16,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-finish-arrival-phone.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:3:0",
+      "world": 27731,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -4,
+          "top": 198,
+          "right": 597,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-opening-phone.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-middle-phone.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "tunnel-mouth:87",
+      "world": 24418,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": -27,
+          "top": 159,
+          "right": 489,
+          "bottom": 455
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 9,
+          "support": 4
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-finish-arrival-phone.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:4:0",
+      "world": 48474,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 5,
+          "top": 159,
+          "right": 586,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-opening-phone.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-middle-phone.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "hard-street-release:103",
+      "world": 24403,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": -87,
+          "top": 218,
+          "right": 519,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 18,
+          "support": 8
+        },
+        "drawCount": 27,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-finish-arrival-phone.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:5:0",
+      "world": 50745,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 1,
+          "top": 226,
+          "right": 497,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-opening-phone.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-middle-phone.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "baggage-claim:111",
+      "world": 29783,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -171,
+          "top": 214,
+          "right": 510,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 11,
+          "support": 2
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-finish-arrival-phone.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:6:0",
+      "world": 55434,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -20,
+          "top": 226,
+          "right": 476,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-opening-phone.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-middle-phone.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "field-entry:111",
+      "world": 29263,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": -103,
+          "top": 257,
+          "right": 500,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 12,
+          "support": 2
+        },
+        "drawCount": 15,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-finish-arrival-phone.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:7:0",
+      "world": 56254,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 12,
+          "top": 186,
+          "right": 584,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-opening-phone.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-middle-phone.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "belt-entry:112",
+      "world": 29463,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -171,
+          "top": 219,
+          "right": 412,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 20,
+          "support": 2
+        },
+        "drawCount": 23,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-finish-arrival-phone.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:8:0",
+      "world": 59886,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -18,
+          "top": 234,
+          "right": 478,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-10-opening-phone.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 33,
+          "top": 367,
+          "right": 355,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "foreground": 10
+        },
+        "drawCount": 10,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-middle-phone.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "middle",
+      "target": "background near x=234",
+      "targetEntityId": "crowd-entry:119",
+      "world": 29163,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 27,
+          "top": 216,
+          "right": 537,
+          "bottom": 435
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 12,
+          "support": 4
+        },
+        "drawCount": 17,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-finish-arrival-phone.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:9:0",
+      "world": 61807,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 3,
+          "top": 69,
+          "right": 587,
+          "bottom": 443
+        },
+        "layerCounts": {
+          "background": 3,
+          "foreground": 11
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "home-landscape.jpg",
+      "level": null,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "home",
+      "target": "exact home title",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 45,
+          "top": 263,
+          "right": 668,
+          "bottom": 356
+        },
+        "layerCounts": {
+          "foreground": 3
+        },
+        "drawCount": 3,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-opening-landscape.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 33,
+          "right": 907,
+          "bottom": 206
+        },
+        "layerCounts": {
+          "foreground": 23,
+          "support": 4
+        },
+        "drawCount": 27,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-middle-landscape.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "street-release:96",
+      "world": 24040,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -25,
+          "top": 33,
+          "right": 846,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 27,
+          "support": 8
+        },
+        "drawCount": 36,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-01-finish-arrival-landscape.jpg",
+      "level": 1,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:0:0",
+      "world": 51053,
+      "playLength": 51439,
+      "scene": {
+        "bounds": {
+          "left": -5,
+          "top": 55,
+          "right": 371,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 167,
+          "background": 12,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-opening-landscape.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 34,
+          "right": 959,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "foreground": 21,
+          "support": 4
+        },
+        "drawCount": 25,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-middle-landscape.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "bridge-light:68",
+      "world": 20350,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -88,
+          "top": 32,
+          "right": 880,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 22,
+          "support": 8
+        },
+        "drawCount": 31,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-02-finish-arrival-landscape.jpg",
+      "level": 2,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:1:0",
+      "world": 39248,
+      "playLength": 39619,
+      "scene": {
+        "bounds": {
+          "left": -11,
+          "top": 55,
+          "right": 370,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 105,
+          "background": 9,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-opening-landscape.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 33,
+          "right": 920,
+          "bottom": 206
+        },
+        "layerCounts": {
+          "foreground": 17,
+          "support": 4
+        },
+        "drawCount": 21,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-middle-landscape.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "crowd-crossing:93",
+      "world": 24850,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -27,
+          "top": 65,
+          "right": 951,
+          "bottom": 206
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 24,
+          "support": 12
+        },
+        "drawCount": 37,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-03-finish-arrival-landscape.jpg",
+      "level": 3,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:2:0",
+      "world": 46173,
+      "playLength": 46529,
+      "scene": {
+        "bounds": {
+          "left": -15,
+          "top": 55,
+          "right": 360,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 139,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-opening-landscape.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 65,
+          "right": 931,
+          "bottom": 198
+        },
+        "layerCounts": {
+          "foreground": 19,
+          "support": 4
+        },
+        "drawCount": 23,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-middle-landscape.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "moon-rail:42",
+      "world": 10929,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -31,
+          "top": 32,
+          "right": 991,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 25,
+          "support": 12
+        },
+        "drawCount": 38,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-04-finish-arrival-landscape.jpg",
+      "level": 4,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:3:0",
+      "world": 27731,
+      "playLength": 28112,
+      "scene": {
+        "bounds": {
+          "left": -3,
+          "top": 43,
+          "right": 452,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 83,
+          "background": 7,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-opening-landscape.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 88,
+          "right": 962,
+          "bottom": 212
+        },
+        "layerCounts": {
+          "foreground": 12,
+          "support": 2
+        },
+        "drawCount": 14,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-middle-landscape.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "tunnel-mouth:87",
+      "world": 24119,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": -61,
+          "top": 16,
+          "right": 943,
+          "bottom": 212
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 25,
+          "support": 4
+        },
+        "drawCount": 30,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-05-finish-arrival-landscape.jpg",
+      "level": 5,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:4:0",
+      "world": 48474,
+      "playLength": 48885,
+      "scene": {
+        "bounds": {
+          "left": 4,
+          "top": 16,
+          "right": 444,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 142,
+          "background": 11,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-opening-landscape.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 33,
+          "right": 908,
+          "bottom": 206
+        },
+        "layerCounts": {
+          "foreground": 23,
+          "support": 4
+        },
+        "drawCount": 27,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-middle-landscape.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "hard-street-release:103",
+      "world": 23955,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": -25,
+          "top": 33,
+          "right": 877,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 27,
+          "support": 8
+        },
+        "drawCount": 36,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-06-finish-arrival-landscape.jpg",
+      "level": 6,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:5:0",
+      "world": 50745,
+      "playLength": 51146,
+      "scene": {
+        "bounds": {
+          "left": 1,
+          "top": 55,
+          "right": 376,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 164,
+          "background": 16,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-opening-landscape.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 90,
+          "right": 978,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "foreground": 14,
+          "support": 2
+        },
+        "drawCount": 16,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-middle-landscape.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "baggage-claim:111",
+      "world": 29335,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -90,
+          "top": 62,
+          "right": 930,
+          "bottom": 206
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 24,
+          "support": 6
+        },
+        "drawCount": 31,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-07-finish-arrival-landscape.jpg",
+      "level": 7,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:6:0",
+      "world": 55434,
+      "playLength": 55790,
+      "scene": {
+        "bounds": {
+          "left": -15,
+          "top": 55,
+          "right": 360,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 176,
+          "background": 13,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-opening-landscape.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 79,
+          "right": 912,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "foreground": 17,
+          "support": 2
+        },
+        "drawCount": 19,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-middle-landscape.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "field-entry:111",
+      "world": 28815,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": -9,
+          "top": 62,
+          "right": 922,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 24,
+          "support": 6
+        },
+        "drawCount": 31,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-08-finish-arrival-landscape.jpg",
+      "level": 8,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:7:0",
+      "world": 56254,
+      "playLength": 56670,
+      "scene": {
+        "bounds": {
+          "left": 9,
+          "top": 9,
+          "right": 442,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 187,
+          "background": 14,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-opening-landscape.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 90,
+          "right": 978,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "foreground": 14,
+          "support": 2
+        },
+        "drawCount": 16,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-middle-landscape.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "belt-entry:112",
+      "world": 29015,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -63,
+          "top": 65,
+          "right": 912,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 28,
+          "support": 6
+        },
+        "drawCount": 35,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-09-finish-arrival-landscape.jpg",
+      "level": 9,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:8:0",
+      "world": 59886,
+      "playLength": 60247,
+      "scene": {
+        "bounds": {
+          "left": -13,
+          "top": 55,
+          "right": 362,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 2,
+          "foreground": 11
+        },
+        "drawCount": 13,
+        "entityCounts": {
+          "total": 194,
+          "background": 15,
+          "finishArrival": 2
+        }
+      }
+    },
+    {
+      "file": "level-10-opening-landscape.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "opening",
+      "target": "start",
+      "targetEntityId": null,
+      "world": 0,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 25,
+          "top": 32,
+          "right": 875,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "foreground": 18,
+          "support": 4
+        },
+        "drawCount": 22,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-middle-landscape.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "middle",
+      "target": "background near x=500",
+      "targetEntityId": "crowd-entry:119",
+      "world": 28715,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": -89,
+          "top": 32,
+          "right": 938,
+          "bottom": 197
+        },
+        "layerCounts": {
+          "background": 1,
+          "foreground": 26,
+          "support": 8
+        },
+        "drawCount": 35,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    },
+    {
+      "file": "level-10-finish-arrival-landscape.jpg",
+      "level": 10,
+      "viewport": {
+        "name": "landscape",
+        "width": 844,
+        "height": 390,
+        "deviceScaleFactor": 2
+      },
+      "state": "finish-arrival",
+      "target": "finish-arrival background group",
+      "targetEntityId": "final-dressing:9:0",
+      "world": 61807,
+      "playLength": 62213,
+      "scene": {
+        "bounds": {
+          "left": 2,
+          "top": 4,
+          "right": 647,
+          "bottom": 203
+        },
+        "layerCounts": {
+          "background": 4,
+          "foreground": 11
+        },
+        "drawCount": 15,
+        "entityCounts": {
+          "total": 214,
+          "background": 16,
+          "finishArrival": 4
+        }
+      }
+    }
+  ]
+}

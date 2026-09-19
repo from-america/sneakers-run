@@ -1,0 +1,53 @@
+{
+  "grid": { "frameWidth": 256, "frameHeight": 256, "objectFps": 2 },
+  "characters": {
+    "runner": {
+      "name": "Sneakers O'Toole",
+      "identitySource": "visual-model/source/runner-otoole-source-board.png",
+      "source": "visual-model/source/runner-otoole-actions.png",
+      "runSource": "imagegen/runner/run-v8-contact-sheet.png",
+      "rollSource": "visual-model/source/runner-otoole-roll-crouch.png",
+      "fallback": "imagegen/runner/idle-v1.png",
+      "run": { "file": "imagegen/runner/run-v8-contact-sheet.png", "frames": 8, "sourceFps": 4, "runtimeFps": "distance", "armDriveFrames": { "right": [0, 1, 4, 5], "left": [2, 3, 6, 7] } },
+      "idle": { "file": "imagegen/runner/idle-v1.png", "frames": 1, "runtimeFps": 1 },
+      "roll": { "file": "imagegen/runner/actions/roll-v1.png", "frames": 4, "runtimeFps": 6 },
+      "crouch": { "file": "imagegen/runner/actions/crouch-v1.png", "frames": 4, "runtimeFps": 6 },
+      "jump": { "file": "imagegen/runner/actions/jump-v1.png", "frames": 4, "runtimeFps": 6 },
+      "land": { "file": "imagegen/runner/actions/land-v1.png", "frames": 4, "runtimeFps": 6 },
+      "stumble": { "file": "imagegen/runner/actions/stumble-v1.png", "frames": 4, "runtimeFps": 6 },
+      "celebrate": { "file": "imagegen/runner/actions/celebrate-v1.png", "frames": 4, "runtimeFps": 6 },
+      "rush": { "file": "imagegen/runner/actions/rush-v1.png", "frames": 4, "runtimeFps": 8 }
+    },
+    "chaser": {
+      "run": { "file": "imagegen/chaser/run-v1.png", "frames": 8, "runtimeFps": 8 }
+    }
+  },
+  "props": {
+    "fps": 2,
+    "files": {
+      "car": "imagegen/props/car-v1.png",
+      "low": "imagegen/props/low-v1.png",
+      "high": "imagegen/obstacles/overhead-gate-v2.png",
+      "platform": "imagegen/props/platform-v1.png",
+      "coin": "imagegen/props/coin-v1.png",
+      "coinIcon": "imagegen/props/coin-icon-v1.png",
+      "shield": "imagegen/props/shield-v1.png",
+      "speed": "imagegen/props/speed-v1.png",
+      "magnet": "imagegen/props/magnet-v1.png"
+    }
+  },
+  "vfx": {
+    "fps": 2,
+    "files": {
+      "dust": "imagegen/vfx/dust-v1.png",
+      "coin": "imagegen/vfx/coin-v1.png",
+      "power": "imagegen/vfx/power-v1.png",
+      "impact": "imagegen/vfx/impact-v1.png"
+    }
+  },
+  "worldLayers": {
+    "waterfront": ["far", "mid", "near", "street"],
+    "rooftop": ["far", "mid", "near"],
+    "underpass": ["far", "mid", "near"]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "target": "dist/web over local HTTP",
+  "chapters": [
+    {
+      "stage": 1,
+      "name": "Sneakers",
+      "music": "assets/music/wasot-01.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 2,
+      "name": "Sneaker Run",
+      "music": "assets/Sneakers Run theme.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 3,
+      "name": "Chinatown",
+      "music": "assets/music/chinese-03.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 4,
+      "name": "Rooftops",
+      "music": "assets/music/cancelme.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 5,
+      "name": "Subway",
+      "music": "assets/music/05-prolly.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 6,
+      "name": "Sneaker District",
+      "music": "assets/music/lace-up-06.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 7,
+      "name": "Airport",
+      "music": "assets/music/airport-ooooo.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 8,
+      "name": "Yam farm",
+      "music": "assets/music/gtyoyf.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 9,
+      "name": "Factory",
+      "music": "assets/music/pleasespeed-2ndlast.mp3",
+      "loaded": true,
+      "playing": true
+    },
+    {
+      "stage": 10,
+      "name": "Victory lap",
+      "music": "assets/music/wasot-01.mp3",
+      "loaded": true,
+      "playing": true
+    }
+  ],
+  "missingResources": [],
+  "pageErrors": []
+}
