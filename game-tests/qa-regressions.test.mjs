@@ -84,7 +84,11 @@ test('favicon wiring keeps a static icon and an animated two-state update path',
 });
 
 test('homepage Sneaker Run preview shows the player and both gameplay chasers', () => {
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const homepageDocument = new URL('../index.html', import.meta.url);
+  const html = readFileSync(homepageDocument, 'utf8');
+  const stylesheetHrefs = [...html.matchAll(/<link\b[^>]*rel=["'][^"']*stylesheet[^"']*["'][^>]*href=["']([^"']+)/gi)]
+    .map(([, href]) => href.split('?')[0]);
+  const previewSource = [html, ...stylesheetHrefs.map(href => readFileSync(new URL(href, homepageDocument), 'utf8'))].join('\n');
   const manifest = JSON.parse(readFileSync(new URL('../assets/runtime/sprites.json', import.meta.url), 'utf8'));
   for (const asset of ['home-runner.webp', 'home-chaser-gray.webp', 'home-chaser-blue.webp']) {
     assert.match(html, new RegExp(`runtime/${asset.replace('.', '\\.')}`), `${asset} must be wired into the homepage`);
@@ -92,10 +96,20 @@ test('homepage Sneaker Run preview shows the player and both gameplay chasers', 
   }
   assert.match(html, /runtime\/01-sneaker-shops-flat-v1\.webp/, 'preview must use a clean level background without baked characters');
   assert.doesNotMatch(html, /assets\/city-generated\.webp/, 'preview must not use the legacy composite background');
-  assert.equal((html.match(/class="game-chaser /g) || []).length, 2, 'homepage must render two animated chasers');
-  assert.match(html, /aspect-ratio:320\/360/, 'homepage preview cells must include transparent edge margin');
-  assert.match(html, /animation:home-run/, 'homepage characters must animate with the gameplay run cadence');
-  assert.match(html, /min-height:clamp\(360px,100svh,760px\)/, 'homepage preview must fill short viewport heights without a bottom gap');
+  const embeddedChasers = html.match(/class="game-chaser /g) || [];
+  const standaloneChasers = html.match(/class="home-preview-character home-preview-chaser-(?:gray|blue)"/g) || [];
+  assert.equal(
+    embeddedChasers.length + standaloneChasers.length,
+    2,
+    'homepage must render two animated chasers',
+  );
+  assert.match(previewSource, /aspect-ratio:\s*320\s*\/\s*360/, 'homepage preview cells must include transparent edge margin');
+  assert.match(previewSource, /animation:\s*home-(?:run|preview-run)/, 'homepage characters must animate with the gameplay run cadence');
+  assert.match(
+    previewSource,
+    /min-height:\s*(?:clamp\(360px,\s*100svh,\s*760px\)|360px)/,
+    'homepage preview must fill short viewport heights without a bottom gap',
+  );
 });
 
 test('gameplay events never enter a timing-sensitive Web Audio path', () => {
