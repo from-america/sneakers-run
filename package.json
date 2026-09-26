@@ -25,7 +25,7 @@
   "devDependencies": {
     "@electron/packager": "20.3.0",
     "@playwright/test": "^1.63.0",
-    "electron": "44.4.1"
+    "electron": "44.4.5"
   },
   "version": "3.0.0",
   "description": "Open-source Famous Moji city escape for browser and desktop",
